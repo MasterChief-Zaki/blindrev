@@ -1,0 +1,6 @@
+{
+  "license": "Public domain (NASA imagery: day map, night lights) + CC BY 4.0 (cloud layer, Solar System Scope)",
+  "attribution": "Earth day map: NASA Visible Earth / NASA Goddard Space Flight Center (Blue Marble, 2002). Night lights: NASA Earth Observatory (Suomi NPP VIIRS, 2012). Clouds: Solar System Scope (https://www.solarsystemscope.com/textures/), CC BY 4.0.",
+  "source": "Day: https://commons.wikimedia.org/wiki/File:Whole_world_-_land_and_oceans_12000.jpg (NASA Visible Earth 'Blue Marble: Land Surface, Shallow Water, and Shaded Topography'). Night: https://commons.wikimedia.org/wiki/File:The_earth_at_night.jpg (NASA Earth Observatory). Clouds: https://www.solarsystemscope.com/textures/download/8k_earth_clouds.jpg. All fetched 2026-11-15 (eoimages.gsfc.nasa.gov was unreachable from the build machine).",
+  "notes": "Derived files (Pillow, Lanczos downscale): earth_day_{4k,1k}.jpg = day map at 4096x2048 / 1024x512. earth_aux_{4k,1k}.jpg pack three linear data channels: R = night lights, G = clouds, B = water mask derived from the day map (blue minus red, thresholded, blurred). The 1k pair is loaded first (fast hub ready), the 4k pair replaces it progressively."
+}

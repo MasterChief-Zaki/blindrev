@@ -1,0 +1,67 @@
+# Decisions — agent D (data-forge + mission data)
+
+- **AOI bounds** `[-120.40, 35.88, -119.78, 36.40]` (0.62° × 0.52°, ≈ 56 × 58 km), INJECTED (ARCHITECTURE §9).
+  - Bowl position is read from the graticule of `../sars/07_NISAR_StoryMaps/Land_Subsidence/resources/Jj5OZk8y7-J7ZxXUZjRxg.png` (UAVSAR line 14511, 6/19/2013–11/20/2017). Red core ≈ 36°05.6′ N 120°04.4′ W, second patch ≈ 36°09′ N 119°58′ W.
+  - Narrative: `Land_Subsidence_narrative.md` l.39–48. Postcard row: `09_UAVSAR_Postcards/postcards.csv` row 5 (Huron and Kettleman City).
+- **Real NISAR catalogue used for steps.** Track 042, DESCENDING, frame 070.
+  - Sources: NASA CMR GUNW collection C2854335566-ASF (point query 2026-11-15) and `../sars/EDA/data/granules_{GCOV,GUNW}_PROVISIONAL.csv`.
+  - The frame has 12-day acquisitions from 2025-11-01 to 2026-10-27, except cycle 012 (2026-02-05) and cycle 027 (2026-08-04). Those two have no GCOV and no GUNW.
+- **Step cadence: every third repeat cycle (36 d), 9 steps.**
+  - Steps: s01 2025-12-31 (reference) … s09 2026-10-15. This is the only honest way to get ≥ 2 real "No acquisition" steps (s02, s07, both mid-sequence) within 8–10 steps.
+  - I checked 12-day consecutive steps first. Only one real gap fits in such a window, and 2026-10-27 _was_ acquired (GCOV on GIBS), so it cannot be called "No acquisition".
+  - Side effect: every pair of distinct available steps has Δt ≥ 36 d, so `DT_TOO_SHORT` in play needs the same date picked twice.
+- **Step fields.**
+  - Available steps: `date` = real acquisition start time.
+  - Unavailable steps: `date` = the nominal 12-day slot day (date only, no time), `acquisition: null`, `displacement: null`.
+  - `sourceId` and `citation` name the real GCOV and GUNW granule ids and say explicitly that only the metadata is real.
+- **SIMULATED blocker.** Real GUNW needs an Earthdata login and unwrapping plus time-series preprocessing. The forge instead synthesises a seeded, deterministic LOS displacement series and coherence masks.
+  - Labels: `labels:["SIMULATED"]`; per-step `processingVersion` "SIMULATED/data-forge-1 …"; the briefing body says so.
+  - The **reference mask** is authored, not a scientific product.
+- **Signal design (all SIMULATED).** The persistent answer is a main bowl along the aqueduct (peak −88 mm LOS by s09) plus a north-east bowl (−56 mm), growing monotonically: growth 0, .10, .20, .36, .55, .86, 1.0.
+  - Decoy: a smooth APS (7 mm fbm) plus a 5 mm ramp that change every step.
+  - Decoy: three single-date blobs — s04 −46 mm north of Huron, s06 −32 mm south-west, s08 −54 mm near Kettleman City.
+  - Decoy: a seasonal elastic patch in the NE (+6 … −26 mm).
+  - Reference point (−120.33, 36.33), heightM 0 (nominal; the simulation is 2D).
+- **Geometry.**
+  - NISAR is left-looking (`03_NISAR_Data_User_Guide/.../nisar-intro.md` l.118).
+  - Heading 198.3° comes from the CMR frame polygon.
+  - Incidence 45.5° is _approximate_: the AOI sits ~91 % across the 240 km swath (far range). It is not read from product metadata.
+  - LOS (ground → satellite, ENU) = (−0.677, 0.224, 0.701).
+- **QA.** Invalid pixels are:
+  - outside the real frame-070 footprint (SE corner of the AOI);
+  - in a persistent low-coherence ellipse at (−120.255, 36.175);
+  - in per-pass cropland drop-outs on ~0.5-mile field cells.
+  - Measured coverage is 75.5–78.1 %.
+- **Seeds:** atmosphere 0x5eeda7a0, turbulence 0x5eed7b10, coherence 0x5eedc0e0, fields 0x5eedf1e1, noise 0x5eed0153. Per-step parameters come from core-sim `mulberry32`; spatial noise is position-hashed value noise.
+- **Display.**
+  - Subsidence magnitude is transparent below 12 mm. LOW 12–30, MID 30–55, HIGH ≥ 55 mm.
+  - `legend.thresholds = [30, 55]` (LOW→MID, MID→HIGH). The 12 mm floor appears in `legend.labels` and `evidence/index.json`.
+  - Flat opaque colours. The renderer sets layer opacity.
+  - QA PNG: Ink scrim plus Pearl diagonal hatch. Reference PNG: Amber fill (alpha 80) with an opaque 1-px edge.
+- **Answer key.** The polygons were proposed by `src/author-polygons.ts` (rays to the −25 mm contour of the persistent signal), then frozen in `src/reference.ts` with 16 and 12 vertices. Area 167.4 km².
+- **Deterministic PNG encoder** (`src/png.ts`, LZ77 + fixed Huffman) instead of pngjs/zlib for writing. Reason: Node's bundled zlib may produce different bytes on different CPUs, which would break the re-forge hash gate. pngjs is used only to read back.
+- **`.f32` probe grids are not a `TemporalStep` field.** Convention: same folder and name as the evidence PNG with `.f32`, plus `mission-data/sinking-city/evidence/index.json` (grid, dtype, URLs, stats).
+- **`evidenceMaskId`/`evidenceMaskUrlTemplate` = null.** No per-step binary evidence mask is produced; scoring uses the reference + QA masks.
+- **Git LFS for `.f32`.** The root `.gitattributes` (S) has no `*.f32` rule, so I added `packages/app-shell/public/mission-data/.gitattributes` (`*.f32 filter=lfs …`) inside my folder. The manifest skips dotfiles.
+- **Licence lookup rule.** A file's licence comes from the nearest `ASSET_LICENSE.json` in its folder or an ancestor below `public/`. Tile pyramids carry one per layer root and per date folder. Forge outputs add `"deterministic": true`.
+- **Radar context: maxZoom 10 for every date** (follow-up after G's screenshot `docs/reports/img-G/g-aoi-ev2.png`).
+  - The GIBS z11 NISAR GCOV tiles had holes, a uniform band and noise/speckle inside the swath: tile QA found 9 of 36 bad on 2025-12-31 and 10 of 36 bad on 2026-10-15.
+  - z11 was dropped and the old tiles pruned. z6–10 are clean on all 7 dates.
+  - `src/tile-qa.ts` classifies tiles (hole / uniform / noise / missing inside the expected footprint). `verify` now fails on any bad tile up to a layer's advertised maxZoom.
+- **Sharp optical context: HLS S30 (Sentinel-2, 30 m) on GIBS.**
+  - Window: AOI ± 0.3° (`OPTICAL_WINDOW`).
+  - Dates: 2026-10-17 at z8–11 (≈ 62 m/px; latest clear date, listed first as the default optical view, stepId null) and 2026-06-29 at z8–10 (tied to s06).
+  - Chosen with `src/probe-optical.ts`: both have 100 % window coverage and ≤ 0.2 % cloud. L30 never covered the whole window on a single day (≤ 85 %).
+  - Cost: 19.7 MB. A second z11 date would have added ~9 MB more.
+- **Bundle totals:** D-owned public assets ≈ 51 MB: offline-tiles 11.3, HLS 19.7, radar 10.0, MODIS 0.6, evidence 7.4, qa 1.9, reference 0.26, fixture 0.07.
+- **The follow-up changed only `contextLayers`.** Steps, masks, evidence rasters and everything scoring-related are byte-identical to before (checked by sha256).
+- **MODIS 2025-12-31 is fully overcast** (real imagery). It is kept and labelled "(overcast)" in its context-layer title and citation.
+- **PENDING path.**
+  - `forge --pending` builds only the fixture. A mission file with `aoi.decision:"PENDING"` makes `forge` write the TEST_FIXTURE mission in its place.
+  - The default `forge` always refreshes `data/missions/_fixture-pending.example.json` plus `public/mission-data/_fixture-pending/`: labels TEST_FIXTURE/PLACEHOLDER/SIMULATED, bounds [10, 10, 10.5, 10.4], fictional 2001 dates.
+- **Camera.** Home is California at 1 400 km; the AOI view is (−120.09, 36.14) at 95 km.
+- **Unfinished / for others.**
+  - None blocking: `verify` PASSES (H's licences are in place).
+  - Real GUNW ingestion is not done (blocker above).
+
+STATUS: DONE

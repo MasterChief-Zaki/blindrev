@@ -1,0 +1,52 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "BlindRev",
+  "version": "0.1.0",
+  "identifier": "bureau.blindrev.app",
+  "build": {
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist",
+    "beforeDevCommand": "pnpm run dev",
+    "beforeBuildCommand": "pnpm exec vite build"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "main",
+        "title": "BlindRev",
+        "width": 1600,
+        "height": 900,
+        "minWidth": 1280,
+        "minHeight": 720,
+        "center": true,
+        "resizable": true,
+        "backgroundColor": "#0E1020",
+        "zoomHotkeysEnabled": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; img-src 'self' data: blob: https://assets.ion.cesium.com https://gibs.earthdata.nasa.gov; connect-src 'self' ipc: http://ipc.localhost https://api.cesium.com https://ion.cesium.com https://assets.ion.cesium.com https://gibs.earthdata.nasa.gov https://celestrak.org; style-src 'self' 'unsafe-inline'",
+      "dangerousDisableAssetCspModification": ["style-src"]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "publisher": "BlindRev",
+    "category": "Game",
+    "shortDescription": "A NISAR radar investigation game",
+    "longDescription": "BlindRev: investigate ground change with (simulated) NISAR radar evidence on a 3D globe.",
+    "copyright": "BlindRev team. NASA data credited in-app.",
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper",
+        "silent": true
+      },
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    }
+  }
+}

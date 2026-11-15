@@ -1,0 +1,138 @@
+{
+  "results": {
+    "hub": {
+      "kind": "hub",
+      "impl": "three"
+    },
+    "globe": {
+      "scene": {
+        "kind": "mission",
+        "impl": "cesium"
+      },
+      "status": {
+        "terrain": "ELLIPSOID",
+        "imagery": "ONLINE",
+        "offline": false,
+        "contextLost": false,
+        "sceneReady": true,
+        "logDepth": true,
+        "webgl2": true,
+        "message": "Ellipsoid terrain — no ion token"
+      }
+    },
+    "noAcqIndex": 1,
+    "noAcqState": {
+      "state": "PAUSED_UNAVAILABLE",
+      "index": 1,
+      "stepId": "s02",
+      "date": "2026-02-05",
+      "isAvailable": false
+    },
+    "roi": {
+      "validation": {
+        "ok": true,
+        "area": 131.79654820207153,
+        "errors": []
+      },
+      "validateStatus": {
+        "ok": true,
+        "reason": null
+      }
+    },
+    "pass": {
+      "kind": "SCORE",
+      "iou": 0.7991959798994975,
+      "precision": 1,
+      "recall": 0.7991959798994975,
+      "tier": "PASS",
+      "advisory": [],
+      "roiPixels": 10734,
+      "validPixels": 7952,
+      "coverage": 0.7408235513322153,
+      "tp": 7952,
+      "fp": 0,
+      "fn": 1998,
+      "digest": "ffb9fab1119ae40cae71b38d269c56996204cc16e37a01ca547228ae2cf652c4"
+    },
+    "qaBox": {
+      "box": [-119.89140625, 35.908437500000005, -119.7884765625, 35.994765625],
+      "coverage": 0
+    },
+    "qaRoi": {
+      "ok": true,
+      "reason": null
+    },
+    "qa": {
+      "kind": "QA_DIAGNOSTIC",
+      "code": "LOW_COHERENCE",
+      "message": "Low interferometric coherence in selected zone; inspect high-coherence mask",
+      "coverage": 0,
+      "validPixels": 0,
+      "roiPixels": 7225
+    },
+    "lifecycle": {
+      "created": 3,
+      "destroyed": 2,
+      "maxLive": 1,
+      "live": 1
+    },
+    "routeTimings": [
+      {
+        "from": "menu",
+        "to": "hub",
+        "blankMs": 1855,
+        "readyMs": 1792.4,
+        "coverMs": 505.9,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:45:27.204Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 3201.1,
+        "readyMs": 3101.5,
+        "coverMs": 502.7,
+        "slow": true,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:45:34.197Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 276.5,
+        "readyMs": 249,
+        "coverMs": 504,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:45:50.231Z"
+      }
+    ],
+    "tle": {
+      "source": "snapshot",
+      "epochIso": "2026-11-15T12:25:21.122Z",
+      "ageHours": 8.341835555555555,
+      "stale": false,
+      "refreshLog": [
+        {
+          "at": "2026-11-15T20:45:22.724Z",
+          "outcome": "skipped-automation",
+          "detail": "navigator.webdriver — snapshot only"
+        }
+      ]
+    }
+  },
+  "log": [
+    {
+      "stage": "boot",
+      "type": "requestfailed",
+      "text": "http://localhost:5192/@fs/C:/Users/Mrworldwide/Downloads/Projects/NASA/blindrev/node_modules/.pnpm/@fontsource+ibm-plex-mono@5.3.0/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2 net::ERR_ABORTED"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "license": "NASA/JPL-Caltech asset from the NASA Eyes on the Earth web app; use under NASA media usage guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/). Not an item of NASA 3D Resources.",
+  "attribution": "NISAR spacecraft model: NASA/JPL-Caltech (NASA Eyes on the Earth)",
+  "source": "https://eyes.nasa.gov/assets/static/models/sc_nisar/Nisar.gltf (plus Nisar.bin, Nisar_diff.png, Nisar_norm.png, foil_n_jpg.jpg, meshColor-Nisar_antenna.png); copied unmodified from ../sars/assets/nisar_model/ (downloaded 2026-11-15)",
+  "notes": "Source note (../sars/assets/nisar_model/SOURCE.txt): this is an asset of the Eyes app, not an item in NASA 3D Resources — check NASA media usage terms before redistributing it in a public repository. Shown in the BlindRev hub as the NISAR exhibit; no NASA insignia or endorsement implied. Files are byte-identical copies."
+}

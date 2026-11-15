@@ -1,0 +1,149 @@
+{
+  "schema": "blindrev.evidence-index/1",
+  "label": "SIMULATED",
+  "grid": {
+    "width": 512,
+    "height": 512,
+    "bounds": [
+      -120.4,
+      35.88,
+      -119.78,
+      36.4
+    ],
+    "crs": "EPSG:4326"
+  },
+  "displayGrid": {
+    "width": 1024,
+    "height": 1024,
+    "bounds": [
+      -120.4,
+      35.88,
+      -119.78,
+      36.4
+    ],
+    "crs": "EPSG:4326"
+  },
+  "f32": {
+    "dtype": "float32",
+    "endianness": "little",
+    "unit": "mm",
+    "quantity": "los",
+    "noData": "NaN",
+    "rowOrder": "north-to-south"
+  },
+  "legend": {
+    "ramp": [
+      "#8F5236",
+      "#C9784A",
+      "#E2B08A"
+    ],
+    "labels": [
+      "Low · 12–30 mm",
+      "Mid · 30–55 mm",
+      "High · 55 mm +"
+    ],
+    "unit": "mm LOS subsidence since 2025-12-31 (SIMULATED)",
+    "floorMm": 12,
+    "thresholdsMm": [
+      30,
+      55
+    ]
+  },
+  "referenceStepId": "s01",
+  "steps": [
+    {
+      "stepId": "s01",
+      "date": "2025-12-31T02:56:42Z",
+      "isAvailable": true,
+      "pngUrl": "mission-data/sinking-city/evidence/s01.png",
+      "f32Url": "mission-data/sinking-city/evidence/s01.f32",
+      "qaBinUrl": "mission-data/sinking-city/qa/s01.bin",
+      "qaPngUrl": "mission-data/sinking-city/qa/s01.png",
+      "validCoverage": 0.7752,
+      "minMm": 0,
+      "maxMm": 0
+    },
+    {
+      "stepId": "s02",
+      "date": "2026-02-05",
+      "isAvailable": false
+    },
+    {
+      "stepId": "s03",
+      "date": "2026-03-13T02:56:45Z",
+      "isAvailable": true,
+      "pngUrl": "mission-data/sinking-city/evidence/s03.png",
+      "f32Url": "mission-data/sinking-city/evidence/s03.f32",
+      "qaBinUrl": "mission-data/sinking-city/qa/s03.bin",
+      "qaPngUrl": "mission-data/sinking-city/qa/s03.png",
+      "validCoverage": 0.7684,
+      "minMm": -8.3,
+      "maxMm": 10.1
+    },
+    {
+      "stepId": "s04",
+      "date": "2026-04-18T02:56:45Z",
+      "isAvailable": true,
+      "pngUrl": "mission-data/sinking-city/evidence/s04.png",
+      "f32Url": "mission-data/sinking-city/evidence/s04.f32",
+      "qaBinUrl": "mission-data/sinking-city/qa/s04.bin",
+      "qaPngUrl": "mission-data/sinking-city/qa/s04.png",
+      "validCoverage": 0.7774,
+      "minMm": -46.6,
+      "maxMm": 9.9
+    },
+    {
+      "stepId": "s05",
+      "date": "2026-05-24T02:56:43Z",
+      "isAvailable": true,
+      "pngUrl": "mission-data/sinking-city/evidence/s05.png",
+      "f32Url": "mission-data/sinking-city/evidence/s05.f32",
+      "qaBinUrl": "mission-data/sinking-city/qa/s05.bin",
+      "qaPngUrl": "mission-data/sinking-city/qa/s05.png",
+      "validCoverage": 0.7548,
+      "minMm": -35.7,
+      "maxMm": 3.1
+    },
+    {
+      "stepId": "s06",
+      "date": "2026-06-29T02:56:41Z",
+      "isAvailable": true,
+      "pngUrl": "mission-data/sinking-city/evidence/s06.png",
+      "f32Url": "mission-data/sinking-city/evidence/s06.f32",
+      "qaBinUrl": "mission-data/sinking-city/qa/s06.bin",
+      "qaPngUrl": "mission-data/sinking-city/qa/s06.png",
+      "validCoverage": 0.7626,
+      "minMm": -48.4,
+      "maxMm": 8.3
+    },
+    {
+      "stepId": "s07",
+      "date": "2026-08-04",
+      "isAvailable": false
+    },
+    {
+      "stepId": "s08",
+      "date": "2026-09-09T02:56:38Z",
+      "isAvailable": true,
+      "pngUrl": "mission-data/sinking-city/evidence/s08.png",
+      "f32Url": "mission-data/sinking-city/evidence/s08.f32",
+      "qaBinUrl": "mission-data/sinking-city/qa/s08.bin",
+      "qaPngUrl": "mission-data/sinking-city/qa/s08.png",
+      "validCoverage": 0.7757,
+      "minMm": -74.2,
+      "maxMm": 5.8
+    },
+    {
+      "stepId": "s09",
+      "date": "2026-10-15T02:56:39Z",
+      "isAvailable": true,
+      "pngUrl": "mission-data/sinking-city/evidence/s09.png",
+      "f32Url": "mission-data/sinking-city/evidence/s09.f32",
+      "qaBinUrl": "mission-data/sinking-city/qa/s09.bin",
+      "qaPngUrl": "mission-data/sinking-city/qa/s09.png",
+      "validCoverage": 0.7814,
+      "minMm": -89.8,
+      "maxMm": 8.5
+    }
+  ]
+}

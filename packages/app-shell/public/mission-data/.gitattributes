@@ -1,0 +1,2 @@
+# Owned by data-forge (agent D). The root .gitattributes has no rule for raw Float32 grids.
+*.f32 filter=lfs diff=lfs merge=lfs -text

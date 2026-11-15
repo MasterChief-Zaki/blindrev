@@ -1,0 +1,6 @@
+{
+  "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+  "attribution": "NASA Earth Observatory Blue Marble (MODIS) via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+  "source": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/2004-08-01/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg",
+  "notes": "GIBS layer BlueMarble_ShadedRelief_Bathymetry (Blue Marble: Shaded Relief and Bathymetry (MODIS)), date 2004-08-01, EPSG:3857. Global z0–5; regional z6–8 over [-122.4, 33.88, -117.78, 38.4]. Fetched at build time by data-forge; GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+}

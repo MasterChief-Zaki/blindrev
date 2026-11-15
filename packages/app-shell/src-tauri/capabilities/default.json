@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capabilities of the main BlindRev window: core defaults, window close (menu Quit), plus the opt-in log plugin.",
+  "windows": ["main"],
+  "permissions": ["core:default", "core:window:allow-close", "log:default"]
+}

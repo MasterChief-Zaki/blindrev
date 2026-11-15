@@ -1,0 +1,162 @@
+{
+  "fetchedAt": "2026-11-15T20:14:42.489Z",
+  "durationS": 0.1,
+  "userAgent": "blindrev-data-forge/0.1 (build-time tile fetch)",
+  "maxParallel": 6,
+  "groups": [
+    {
+      "group": "basemap/bluemarble",
+      "requested": 1403,
+      "fetched": 0,
+      "cached": 1403,
+      "failed": 0,
+      "bytes": 11251760,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/hls-s30/2026-10-17",
+      "requested": 110,
+      "fetched": 0,
+      "cached": 110,
+      "failed": 0,
+      "bytes": 14331354,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/hls-s30/2026-06-29",
+      "requested": 38,
+      "fetched": 0,
+      "cached": 38,
+      "failed": 0,
+      "bytes": 5357666,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/modis-terra-truecolor/2025-12-31",
+      "requested": 8,
+      "fetched": 0,
+      "cached": 8,
+      "failed": 0,
+      "bytes": 31709,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/modis-terra-truecolor/2026-03-13",
+      "requested": 8,
+      "fetched": 0,
+      "cached": 8,
+      "failed": 0,
+      "bytes": 90977,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/modis-terra-truecolor/2026-04-18",
+      "requested": 8,
+      "fetched": 0,
+      "cached": 8,
+      "failed": 0,
+      "bytes": 94688,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/modis-terra-truecolor/2026-05-24",
+      "requested": 8,
+      "fetched": 0,
+      "cached": 8,
+      "failed": 0,
+      "bytes": 77621,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/modis-terra-truecolor/2026-06-29",
+      "requested": 8,
+      "fetched": 0,
+      "cached": 8,
+      "failed": 0,
+      "bytes": 92803,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/modis-terra-truecolor/2026-09-09",
+      "requested": 8,
+      "fetched": 0,
+      "cached": 8,
+      "failed": 0,
+      "bytes": 84679,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/modis-terra-truecolor/2026-10-15",
+      "requested": 8,
+      "fetched": 0,
+      "cached": 8,
+      "failed": 0,
+      "bytes": 95950,
+      "emptyTiles": 0
+    },
+    {
+      "group": "context/nisar-gcov/2025-12-31",
+      "requested": 16,
+      "fetched": 0,
+      "cached": 16,
+      "failed": 0,
+      "bytes": 1487637,
+      "emptyTiles": 1
+    },
+    {
+      "group": "context/nisar-gcov/2026-03-13",
+      "requested": 16,
+      "fetched": 0,
+      "cached": 16,
+      "failed": 0,
+      "bytes": 1424257,
+      "emptyTiles": 1
+    },
+    {
+      "group": "context/nisar-gcov/2026-04-18",
+      "requested": 16,
+      "fetched": 0,
+      "cached": 16,
+      "failed": 0,
+      "bytes": 1412212,
+      "emptyTiles": 1
+    },
+    {
+      "group": "context/nisar-gcov/2026-05-24",
+      "requested": 16,
+      "fetched": 0,
+      "cached": 16,
+      "failed": 0,
+      "bytes": 1403292,
+      "emptyTiles": 1
+    },
+    {
+      "group": "context/nisar-gcov/2026-06-29",
+      "requested": 16,
+      "fetched": 0,
+      "cached": 16,
+      "failed": 0,
+      "bytes": 1401752,
+      "emptyTiles": 1
+    },
+    {
+      "group": "context/nisar-gcov/2026-09-09",
+      "requested": 16,
+      "fetched": 0,
+      "cached": 16,
+      "failed": 0,
+      "bytes": 1412613,
+      "emptyTiles": 1
+    },
+    {
+      "group": "context/nisar-gcov/2026-10-15",
+      "requested": 16,
+      "fetched": 0,
+      "cached": 16,
+      "failed": 0,
+      "bytes": 1413069,
+      "emptyTiles": 1
+    }
+  ],
+  "failures": []
+}

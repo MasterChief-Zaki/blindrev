@@ -1,0 +1,1053 @@
+{
+  "schemaVersion": 1,
+  "missionId": "sinking-city",
+  "caseId": "CASE_001",
+  "title": "The Sinking City",
+  "kicker": "Shifting ground",
+  "theme": "subsidence",
+  "aoi": {
+    "decision": "INJECTED",
+    "bounds": [-120.4, 35.88, -119.78, 36.4],
+    "name": "California Aqueduct corridor, Huron – Kettleman City, San Joaquin Valley, California",
+    "source": "../sars/07_NISAR_StoryMaps/Land_Subsidence/Land_Subsidence_narrative.md (case study 'Central Valley Groundwater Subsidence'; bowl extent read from the graticule of resources/Jj5OZk8y7-J7ZxXUZjRxg.png, UAVSAR line 14511, 36°00'–36°12' N, 119°58'–120°08' W); ../sars/09_UAVSAR_Postcards/postcards.csv (row 'Huron and Kettleman City', July 2013 – March 2015); docs/ARCHITECTURE.md §9",
+    "injectedBy": "orchestrator (operator decision, docs/ARCHITECTURE.md §9)",
+    "injectedAt": "2026-11-15"
+  },
+  "effectiveBounds": [-120.4, 35.88, -119.78, 36.4],
+  "labels": ["SIMULATED"],
+  "briefing": {
+    "question": "Where has the ground changed?",
+    "summary": "Farms along the California Aqueduct pump groundwater, and the land above can sink. Follow ten months of radar passes and mark the ground that keeps going down.",
+    "body": [
+      "This is the San Joaquin Valley between Huron and Kettleman City. The aqueduct carries water south right through it.",
+      "Every step is a real NISAR pass: track 042, descending, frame 070. The ground motion you see is SIMULATED for this case. Only the dates and the orbit geometry are real.",
+      "Some changes are just weather in the radar signal. They show up once and are gone on the next pass. Look for ground that keeps sinking, step after step.",
+      "Hatched areas had low radar coherence on that pass, so there is nothing reliable to read there.",
+      "Two passes are missing from the record. They are marked \"No acquisition\", and nothing is filled in for them.",
+      "Pick two dates at least 24 days apart, outline your region and validate it. The score compares your region with an authored answer mask. It is a mission score, not a scientific measurement."
+    ],
+    "location": "California Aqueduct corridor, Huron – Kettleman City, San Joaquin Valley, California · 36.14° N, 120.09° W",
+    "dates": "31 Dec 2025 – 15 Oct 2026 · 9 passes, every third 12-day cycle · 2 with no acquisition",
+    "source": "Dates, track and frame: NISAR catalogue (NASA CMR, ASF DAAC). Displacement and coherence: SIMULATED by BlindRev data-forge. Context imagery: NASA GIBS (HLS S30 Sentinel-2 true colour — contains modified Copernicus Sentinel-2 data; MODIS Terra; NISAR GCOV; Blue Marble).",
+    "facts": [
+      {
+        "text": "In 2014, the second year of extreme drought, pumping opened a subsidence bowl across the California Aqueduct. The closest parts of the canal sank more than 12 inches.",
+        "source": "../sars/08_NISAR_White_Papers/text/NISAR_Applications_Drought_and_Groundwater_Withdrawal1.txt (l.89–97)"
+      },
+      {
+        "text": "Airborne radar (UAVSAR) watched the same bowl from June 2013 to November 2017. Parts of it sank more than 40 inches.",
+        "source": "../sars/07_NISAR_StoryMaps/Land_Subsidence/Land_Subsidence_narrative.md (l.48; Miller et al. 2020, Remote Sensing of Environment 251:112063; Jones et al. 2020)"
+      },
+      {
+        "text": "Near Huron and Kettleman City, the ground sank more than 7 inches between July 2013 and March 2015.",
+        "source": "../sars/09_UAVSAR_Postcards/postcards.csv (row 5, 'UAVSAR-postcard-CA-drought')"
+      },
+      {
+        "text": "When groundwater is pumped out, the soil compacts and the surface sinks, sometimes for good. That can crack canals and cut how much water they carry.",
+        "source": "../sars/07_NISAR_StoryMaps/Land_Subsidence/Land_Subsidence_narrative.md (l.39–41)"
+      },
+      {
+        "text": "NISAR images in L-band (about 24 cm wavelength), which keeps a better lock on the ground in vegetated farmland.",
+        "source": "../sars/07_NISAR_StoryMaps/Land_Subsidence/Land_Subsidence_narrative.md (l.88)"
+      },
+      {
+        "text": "NISAR looks to the left and repeats every track every 12 days. Track 042 missed two passes over this frame: 5 Feb and 4 Aug 2026.",
+        "source": "../sars/03_NISAR_Data_User_Guide/site_mirror/text/nisar-intro.md (l.118); ../sars/03_NISAR_Data_User_Guide/site_mirror/text/gcov.md (l.154); NASA CMR collection C2854335566-ASF (queried 2026-11-15)"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "schemaVersion": 2,
+      "stepId": "s01",
+      "date": "2025-12-31T02:56:42Z",
+      "acquisitionStart": "2025-12-31T02:56:42Z",
+      "acquisitionEnd": "2025-12-31T02:57:17Z",
+      "isAvailable": true,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "SIMULATED/data-forge-1 (seeded synthetic values; no NISAR measurement)",
+      "sourceId": "SIMULATED:sinking-city:s01 (real acquisition metadata: NISAR_L2_PR_GCOV_009_042_D_070_4005_DHDH_A_20251231T025642_20251231T025717_P05023_N_F_J_001)",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "mission-data/sinking-city/evidence/s01.png",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": {
+        "quantity": "los",
+        "unit": "mm",
+        "signConvention": "Cumulative line-of-sight displacement since the reference acquisition (s01, 2025-12-31). Positive = motion toward the satellite; negative = motion away from the satellite (subsidence). Display classes show subsidence magnitude.",
+        "referenceStepId": "s01",
+        "referencePoint": {
+          "lon": -120.33,
+          "lat": 36.33,
+          "heightM": 0
+        },
+        "incidenceAngleDeg": 45.5,
+        "lineOfSight": {
+          "east": -0.6772,
+          "north": 0.224,
+          "up": 0.7009
+        }
+      },
+      "acquisition": {
+        "track": 42,
+        "frame": 70,
+        "orbitDirection": "DESCENDING"
+      },
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": "qa-s01",
+      "qaMaskUrlTemplate": "mission-data/sinking-city/qa/s01.png",
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": null,
+      "uncertaintyType": "none",
+      "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+      "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+      "citation": "Reference epoch: displacement is zero by definition. SIMULATED values (BlindRev data-forge data-forge-1, seeds 0x5eeda7a0/0x5eed7b10/0x5eedc0e0/0x5eedf1e1/0x5eed0153). Only the acquisition metadata is real: NISAR L2 GCOV granule NISAR_L2_PR_GCOV_009_042_D_070_4005_DHDH_A_20251231T025642_20251231T025717_P05023_N_F_J_001; GUNW pair NISAR_L2_PR_GUNW_009_042_D_070_010_4000_SH_20251231T025642_20251231T025717_20260112T025643_20260112T025717_P05023_N_F_J_001 (NASA/JPL-Caltech & ISRO; ASF DAAC; NASA CMR collection C2854335566-ASF, queried 2026-11-15)."
+    },
+    {
+      "schemaVersion": 2,
+      "stepId": "s02",
+      "date": "2026-02-05",
+      "acquisitionStart": "2026-02-05",
+      "acquisitionEnd": "2026-02-05",
+      "isAvailable": false,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "NONE (no acquisition)",
+      "sourceId": "NO_ACQUISITION:nisar-042-D-070:cycle-012",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": null,
+      "acquisition": null,
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": null,
+      "qaMaskUrlTemplate": null,
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": null,
+      "uncertaintyType": "none",
+      "license": "n/a — no data for this date (metadata CC0-1.0)",
+      "attribution": "NISAR catalogue: NASA/JPL-Caltech, ASF DAAC (NASA CMR)",
+      "citation": "No acquisition: NISAR track 042 frame 070 (DESCENDING) has no GCOV and no GUNW granule for repeat cycle 012 (2026-02-05) in the NASA CMR catalogue (collection C2854335566-ASF, queried 2026-11-15) or in ../sars/EDA/data/granules_GCOV_PROVISIONAL.csv / granules_GUNW_PROVISIONAL.csv. Nothing is interpolated for this date."
+    },
+    {
+      "schemaVersion": 2,
+      "stepId": "s03",
+      "date": "2026-03-13T02:56:45Z",
+      "acquisitionStart": "2026-03-13T02:56:45Z",
+      "acquisitionEnd": "2026-03-13T02:57:20Z",
+      "isAvailable": true,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "SIMULATED/data-forge-1 (seeded synthetic values; no NISAR measurement)",
+      "sourceId": "SIMULATED:sinking-city:s03 (real acquisition metadata: NISAR_L2_PR_GCOV_015_042_D_070_4005_DHDH_A_20260313T025645_20260313T025720_P05023_N_F_J_001)",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "mission-data/sinking-city/evidence/s03.png",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": {
+        "quantity": "los",
+        "unit": "mm",
+        "signConvention": "Cumulative line-of-sight displacement since the reference acquisition (s01, 2025-12-31). Positive = motion toward the satellite; negative = motion away from the satellite (subsidence). Display classes show subsidence magnitude.",
+        "referenceStepId": "s01",
+        "referencePoint": {
+          "lon": -120.33,
+          "lat": 36.33,
+          "heightM": 0
+        },
+        "incidenceAngleDeg": 45.5,
+        "lineOfSight": {
+          "east": -0.6772,
+          "north": 0.224,
+          "up": 0.7009
+        }
+      },
+      "acquisition": {
+        "track": 42,
+        "frame": 70,
+        "orbitDirection": "DESCENDING"
+      },
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": "qa-s03",
+      "qaMaskUrlTemplate": "mission-data/sinking-city/qa/s03.png",
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": 8,
+      "uncertaintyType": "rmse_mm",
+      "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+      "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+      "citation": "SIMULATED values (BlindRev data-forge data-forge-1, seeds 0x5eeda7a0/0x5eed7b10/0x5eedc0e0/0x5eedf1e1/0x5eed0153). Only the acquisition metadata is real: NISAR L2 GCOV granule NISAR_L2_PR_GCOV_015_042_D_070_4005_DHDH_A_20260313T025645_20260313T025720_P05023_N_F_J_001; GUNW pair NISAR_L2_PR_GUNW_014_042_D_070_015_4000_SH_20260301T025645_20260301T025719_20260313T025645_20260313T025720_P05023_N_F_J_001 (NASA/JPL-Caltech & ISRO; ASF DAAC; NASA CMR collection C2854335566-ASF, queried 2026-11-15)."
+    },
+    {
+      "schemaVersion": 2,
+      "stepId": "s04",
+      "date": "2026-04-18T02:56:45Z",
+      "acquisitionStart": "2026-04-18T02:56:45Z",
+      "acquisitionEnd": "2026-04-18T02:57:20Z",
+      "isAvailable": true,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "SIMULATED/data-forge-1 (seeded synthetic values; no NISAR measurement)",
+      "sourceId": "SIMULATED:sinking-city:s04 (real acquisition metadata: NISAR_L2_PR_GCOV_018_042_D_070_4005_DHDH_A_20260418T025645_20260418T025720_P05023_N_F_J_001)",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "mission-data/sinking-city/evidence/s04.png",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": {
+        "quantity": "los",
+        "unit": "mm",
+        "signConvention": "Cumulative line-of-sight displacement since the reference acquisition (s01, 2025-12-31). Positive = motion toward the satellite; negative = motion away from the satellite (subsidence). Display classes show subsidence magnitude.",
+        "referenceStepId": "s01",
+        "referencePoint": {
+          "lon": -120.33,
+          "lat": 36.33,
+          "heightM": 0
+        },
+        "incidenceAngleDeg": 45.5,
+        "lineOfSight": {
+          "east": -0.6772,
+          "north": 0.224,
+          "up": 0.7009
+        }
+      },
+      "acquisition": {
+        "track": 42,
+        "frame": 70,
+        "orbitDirection": "DESCENDING"
+      },
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": "qa-s04",
+      "qaMaskUrlTemplate": "mission-data/sinking-city/qa/s04.png",
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": 8,
+      "uncertaintyType": "rmse_mm",
+      "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+      "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+      "citation": "SIMULATED values (BlindRev data-forge data-forge-1, seeds 0x5eeda7a0/0x5eed7b10/0x5eedc0e0/0x5eedf1e1/0x5eed0153). Only the acquisition metadata is real: NISAR L2 GCOV granule NISAR_L2_PR_GCOV_018_042_D_070_4005_DHDH_A_20260418T025645_20260418T025720_P05023_N_F_J_001; GUNW pair NISAR_L2_PR_GUNW_017_042_D_070_018_4000_SH_20260406T025645_20260406T025720_20260418T025645_20260418T025720_P05023_N_F_J_001 (NASA/JPL-Caltech & ISRO; ASF DAAC; NASA CMR collection C2854335566-ASF, queried 2026-11-15)."
+    },
+    {
+      "schemaVersion": 2,
+      "stepId": "s05",
+      "date": "2026-05-24T02:56:43Z",
+      "acquisitionStart": "2026-05-24T02:56:43Z",
+      "acquisitionEnd": "2026-05-24T02:57:18Z",
+      "isAvailable": true,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "SIMULATED/data-forge-1 (seeded synthetic values; no NISAR measurement)",
+      "sourceId": "SIMULATED:sinking-city:s05 (real acquisition metadata: NISAR_L2_PR_GCOV_021_042_D_070_4005_DHDH_A_20260524T025643_20260524T025718_P05023_N_F_J_001)",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "mission-data/sinking-city/evidence/s05.png",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": {
+        "quantity": "los",
+        "unit": "mm",
+        "signConvention": "Cumulative line-of-sight displacement since the reference acquisition (s01, 2025-12-31). Positive = motion toward the satellite; negative = motion away from the satellite (subsidence). Display classes show subsidence magnitude.",
+        "referenceStepId": "s01",
+        "referencePoint": {
+          "lon": -120.33,
+          "lat": 36.33,
+          "heightM": 0
+        },
+        "incidenceAngleDeg": 45.5,
+        "lineOfSight": {
+          "east": -0.6772,
+          "north": 0.224,
+          "up": 0.7009
+        }
+      },
+      "acquisition": {
+        "track": 42,
+        "frame": 70,
+        "orbitDirection": "DESCENDING"
+      },
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": "qa-s05",
+      "qaMaskUrlTemplate": "mission-data/sinking-city/qa/s05.png",
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": 8,
+      "uncertaintyType": "rmse_mm",
+      "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+      "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+      "citation": "SIMULATED values (BlindRev data-forge data-forge-1, seeds 0x5eeda7a0/0x5eed7b10/0x5eedc0e0/0x5eedf1e1/0x5eed0153). Only the acquisition metadata is real: NISAR L2 GCOV granule NISAR_L2_PR_GCOV_021_042_D_070_4005_DHDH_A_20260524T025643_20260524T025718_P05023_N_F_J_001; GUNW pair NISAR_L2_PR_GUNW_020_042_D_070_021_4000_SH_20260512T025644_20260512T025719_20260524T025643_20260524T025718_P05023_N_F_J_001 (NASA/JPL-Caltech & ISRO; ASF DAAC; NASA CMR collection C2854335566-ASF, queried 2026-11-15)."
+    },
+    {
+      "schemaVersion": 2,
+      "stepId": "s06",
+      "date": "2026-06-29T02:56:41Z",
+      "acquisitionStart": "2026-06-29T02:56:41Z",
+      "acquisitionEnd": "2026-06-29T02:57:16Z",
+      "isAvailable": true,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "SIMULATED/data-forge-1 (seeded synthetic values; no NISAR measurement)",
+      "sourceId": "SIMULATED:sinking-city:s06 (real acquisition metadata: NISAR_L2_PR_GCOV_024_042_D_070_4005_DHDH_A_20260629T025641_20260629T025716_P05023_N_F_J_001)",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "mission-data/sinking-city/evidence/s06.png",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": {
+        "quantity": "los",
+        "unit": "mm",
+        "signConvention": "Cumulative line-of-sight displacement since the reference acquisition (s01, 2025-12-31). Positive = motion toward the satellite; negative = motion away from the satellite (subsidence). Display classes show subsidence magnitude.",
+        "referenceStepId": "s01",
+        "referencePoint": {
+          "lon": -120.33,
+          "lat": 36.33,
+          "heightM": 0
+        },
+        "incidenceAngleDeg": 45.5,
+        "lineOfSight": {
+          "east": -0.6772,
+          "north": 0.224,
+          "up": 0.7009
+        }
+      },
+      "acquisition": {
+        "track": 42,
+        "frame": 70,
+        "orbitDirection": "DESCENDING"
+      },
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": "qa-s06",
+      "qaMaskUrlTemplate": "mission-data/sinking-city/qa/s06.png",
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": 8,
+      "uncertaintyType": "rmse_mm",
+      "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+      "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+      "citation": "SIMULATED values (BlindRev data-forge data-forge-1, seeds 0x5eeda7a0/0x5eed7b10/0x5eedc0e0/0x5eedf1e1/0x5eed0153). Only the acquisition metadata is real: NISAR L2 GCOV granule NISAR_L2_PR_GCOV_024_042_D_070_4005_DHDH_A_20260629T025641_20260629T025716_P05023_N_F_J_001; GUNW pair NISAR_L2_PR_GUNW_023_042_D_070_024_4000_SH_20260617T025642_20260617T025717_20260629T025641_20260629T025716_P05023_N_F_J_001 (NASA/JPL-Caltech & ISRO; ASF DAAC; NASA CMR collection C2854335566-ASF, queried 2026-11-15)."
+    },
+    {
+      "schemaVersion": 2,
+      "stepId": "s07",
+      "date": "2026-08-04",
+      "acquisitionStart": "2026-08-04",
+      "acquisitionEnd": "2026-08-04",
+      "isAvailable": false,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "NONE (no acquisition)",
+      "sourceId": "NO_ACQUISITION:nisar-042-D-070:cycle-027",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": null,
+      "acquisition": null,
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": null,
+      "qaMaskUrlTemplate": null,
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": null,
+      "uncertaintyType": "none",
+      "license": "n/a — no data for this date (metadata CC0-1.0)",
+      "attribution": "NISAR catalogue: NASA/JPL-Caltech, ASF DAAC (NASA CMR)",
+      "citation": "No acquisition: NISAR track 042 frame 070 (DESCENDING) has no GCOV and no GUNW granule for repeat cycle 027 (2026-08-04) in the NASA CMR catalogue (collection C2854335566-ASF, queried 2026-11-15) or in ../sars/EDA/data/granules_GCOV_PROVISIONAL.csv / granules_GUNW_PROVISIONAL.csv. Nothing is interpolated for this date."
+    },
+    {
+      "schemaVersion": 2,
+      "stepId": "s08",
+      "date": "2026-09-09T02:56:38Z",
+      "acquisitionStart": "2026-09-09T02:56:38Z",
+      "acquisitionEnd": "2026-09-09T02:57:13Z",
+      "isAvailable": true,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "SIMULATED/data-forge-1 (seeded synthetic values; no NISAR measurement)",
+      "sourceId": "SIMULATED:sinking-city:s08 (real acquisition metadata: NISAR_L2_PR_GCOV_030_042_D_070_4005_DHDH_A_20260909T025638_20260909T025713_P05023_N_F_J_001)",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "mission-data/sinking-city/evidence/s08.png",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": {
+        "quantity": "los",
+        "unit": "mm",
+        "signConvention": "Cumulative line-of-sight displacement since the reference acquisition (s01, 2025-12-31). Positive = motion toward the satellite; negative = motion away from the satellite (subsidence). Display classes show subsidence magnitude.",
+        "referenceStepId": "s01",
+        "referencePoint": {
+          "lon": -120.33,
+          "lat": 36.33,
+          "heightM": 0
+        },
+        "incidenceAngleDeg": 45.5,
+        "lineOfSight": {
+          "east": -0.6772,
+          "north": 0.224,
+          "up": 0.7009
+        }
+      },
+      "acquisition": {
+        "track": 42,
+        "frame": 70,
+        "orbitDirection": "DESCENDING"
+      },
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": "qa-s08",
+      "qaMaskUrlTemplate": "mission-data/sinking-city/qa/s08.png",
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": 8,
+      "uncertaintyType": "rmse_mm",
+      "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+      "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+      "citation": "SIMULATED values (BlindRev data-forge data-forge-1, seeds 0x5eeda7a0/0x5eed7b10/0x5eedc0e0/0x5eedf1e1/0x5eed0153). Only the acquisition metadata is real: NISAR L2 GCOV granule NISAR_L2_PR_GCOV_030_042_D_070_4005_DHDH_A_20260909T025638_20260909T025713_P05023_N_F_J_001; GUNW pair NISAR_L2_PR_GUNW_029_042_D_070_030_4000_SH_20260828T025638_20260828T025713_20260909T025638_20260909T025713_P05023_N_F_J_001 (NASA/JPL-Caltech & ISRO; ASF DAAC; NASA CMR collection C2854335566-ASF, queried 2026-11-15)."
+    },
+    {
+      "schemaVersion": 2,
+      "stepId": "s09",
+      "date": "2026-10-15T02:56:39Z",
+      "acquisitionStart": "2026-10-15T02:56:39Z",
+      "acquisitionEnd": "2026-10-15T02:57:13Z",
+      "isAvailable": true,
+      "platform": "NISAR",
+      "instrument": "L-SAR (L-band SAR)",
+      "processingVersion": "SIMULATED/data-forge-1 (seeded synthetic values; no NISAR measurement)",
+      "sourceId": "SIMULATED:sinking-city:s09 (real acquisition metadata: NISAR_L2_PR_GCOV_033_042_D_070_4005_DHDH_A_20261015T025639_20261015T025713_P05023_N_F_J_001)",
+      "layerId": "blindrev-sim-los-displacement",
+      "tileUrlTemplate": "mission-data/sinking-city/evidence/s09.png",
+      "crs": "EPSG:4326",
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "resolutionMeters": 56,
+      "noDataValue": null,
+      "displacement": {
+        "quantity": "los",
+        "unit": "mm",
+        "signConvention": "Cumulative line-of-sight displacement since the reference acquisition (s01, 2025-12-31). Positive = motion toward the satellite; negative = motion away from the satellite (subsidence). Display classes show subsidence magnitude.",
+        "referenceStepId": "s01",
+        "referencePoint": {
+          "lon": -120.33,
+          "lat": 36.33,
+          "heightM": 0
+        },
+        "incidenceAngleDeg": 45.5,
+        "lineOfSight": {
+          "east": -0.6772,
+          "north": 0.224,
+          "up": 0.7009
+        }
+      },
+      "acquisition": {
+        "track": 42,
+        "frame": 70,
+        "orbitDirection": "DESCENDING"
+      },
+      "tiling": {
+        "tileMatrixSet": "SINGLE_TILE",
+        "minZoom": 0,
+        "maxZoom": 0
+      },
+      "qaMaskId": "qa-s09",
+      "qaMaskUrlTemplate": "mission-data/sinking-city/qa/s09.png",
+      "evidenceMaskId": null,
+      "evidenceMaskUrlTemplate": null,
+      "uncertainty": 8,
+      "uncertaintyType": "rmse_mm",
+      "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+      "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+      "citation": "SIMULATED values (BlindRev data-forge data-forge-1, seeds 0x5eeda7a0/0x5eed7b10/0x5eedc0e0/0x5eedf1e1/0x5eed0153). Only the acquisition metadata is real: NISAR L2 GCOV granule NISAR_L2_PR_GCOV_033_042_D_070_4005_DHDH_A_20261015T025639_20261015T025713_P05023_N_F_J_001; GUNW pair NISAR_L2_PR_GUNW_032_042_D_070_033_4000_SH_20261003T025638_20261003T025713_20261015T025639_20261015T025713_P05023_N_F_J_001 (NASA/JPL-Caltech & ISRO; ASF DAAC; NASA CMR collection C2854335566-ASF, queried 2026-11-15)."
+    }
+  ],
+  "masks": {
+    "qa-s01": {
+      "width": 512,
+      "height": 512,
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "crs": "EPSG:4326",
+      "maskId": "qa-s01",
+      "version": "data-forge-1",
+      "binUrl": "mission-data/sinking-city/qa/s01.bin",
+      "pngUrl": "mission-data/sinking-city/qa/s01.png",
+      "sha256": "aece9f89a48016a16b641b7731c3ba526572d6e524ae3efe957372cf8680a4e4"
+    },
+    "qa-s03": {
+      "width": 512,
+      "height": 512,
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "crs": "EPSG:4326",
+      "maskId": "qa-s03",
+      "version": "data-forge-1",
+      "binUrl": "mission-data/sinking-city/qa/s03.bin",
+      "pngUrl": "mission-data/sinking-city/qa/s03.png",
+      "sha256": "65fd9b76915d8f53d456d54417ec192f3e8d36558f82f0d72684afddd8651f1d"
+    },
+    "qa-s04": {
+      "width": 512,
+      "height": 512,
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "crs": "EPSG:4326",
+      "maskId": "qa-s04",
+      "version": "data-forge-1",
+      "binUrl": "mission-data/sinking-city/qa/s04.bin",
+      "pngUrl": "mission-data/sinking-city/qa/s04.png",
+      "sha256": "c0f46a919f1248465c62a33c0d7d113e69a26514a46ac0f9365f0139d2ef626a"
+    },
+    "qa-s05": {
+      "width": 512,
+      "height": 512,
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "crs": "EPSG:4326",
+      "maskId": "qa-s05",
+      "version": "data-forge-1",
+      "binUrl": "mission-data/sinking-city/qa/s05.bin",
+      "pngUrl": "mission-data/sinking-city/qa/s05.png",
+      "sha256": "0156b6cd07c4b801d73f9872f46c02a59fb4a2721150037fe94440cc879b88cc"
+    },
+    "qa-s06": {
+      "width": 512,
+      "height": 512,
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "crs": "EPSG:4326",
+      "maskId": "qa-s06",
+      "version": "data-forge-1",
+      "binUrl": "mission-data/sinking-city/qa/s06.bin",
+      "pngUrl": "mission-data/sinking-city/qa/s06.png",
+      "sha256": "9252ef61de6f9037bb8089ad72fdb2c6ddc637cd864d9a8fe10a3f872b995b97"
+    },
+    "qa-s08": {
+      "width": 512,
+      "height": 512,
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "crs": "EPSG:4326",
+      "maskId": "qa-s08",
+      "version": "data-forge-1",
+      "binUrl": "mission-data/sinking-city/qa/s08.bin",
+      "pngUrl": "mission-data/sinking-city/qa/s08.png",
+      "sha256": "e5a0ebed291f3eb951f9675bd12063b778d22786029aac7013c079dd6223ffdf"
+    },
+    "qa-s09": {
+      "width": 512,
+      "height": 512,
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "crs": "EPSG:4326",
+      "maskId": "qa-s09",
+      "version": "data-forge-1",
+      "binUrl": "mission-data/sinking-city/qa/s09.bin",
+      "pngUrl": "mission-data/sinking-city/qa/s09.png",
+      "sha256": "60638b26288bb78f275bb2f785e70474999bcda3ed457d1846cfd833fa573d20"
+    },
+    "reference-v1": {
+      "width": 512,
+      "height": 512,
+      "bounds": [-120.4, 35.88, -119.78, 36.4],
+      "crs": "EPSG:4326",
+      "maskId": "reference-v1",
+      "version": "v1",
+      "binUrl": "mission-data/sinking-city/reference/mask-v1.bin",
+      "pngUrl": "mission-data/sinking-city/reference/mask-v1.png",
+      "sha256": "00384075cd5567e8bbe16b7330be8252817fe7fbcb3306cd3fbac74cc070b085"
+    }
+  },
+  "referenceMaskId": "reference-v1",
+  "referencePolygons": [
+    [
+      {
+        "lon": -120.074,
+        "lat": 36.1374
+      },
+      {
+        "lon": -120.0538,
+        "lat": 36.1337
+      },
+      {
+        "lon": -120.0331,
+        "lat": 36.1273
+      },
+      {
+        "lon": -120.0093,
+        "lat": 36.1158
+      },
+      {
+        "lon": -119.9878,
+        "lat": 36.094
+      },
+      {
+        "lon": -119.9831,
+        "lat": 36.0634
+      },
+      {
+        "lon": -120.0158,
+        "lat": 36.0467
+      },
+      {
+        "lon": -120.0499,
+        "lat": 36.0468
+      },
+      {
+        "lon": -120.074,
+        "lat": 36.0501
+      },
+      {
+        "lon": -120.094,
+        "lat": 36.0547
+      },
+      {
+        "lon": -120.1129,
+        "lat": 36.0623
+      },
+      {
+        "lon": -120.1398,
+        "lat": 36.0718
+      },
+      {
+        "lon": -120.163,
+        "lat": 36.094
+      },
+      {
+        "lon": -120.1737,
+        "lat": 36.1276
+      },
+      {
+        "lon": -120.1354,
+        "lat": 36.1439
+      },
+      {
+        "lon": -120.0978,
+        "lat": 36.1408
+      }
+    ],
+    [
+      {
+        "lon": -119.972,
+        "lat": 36.1955
+      },
+      {
+        "lon": -119.9556,
+        "lat": 36.1851
+      },
+      {
+        "lon": -119.946,
+        "lat": 36.1742
+      },
+      {
+        "lon": -119.942,
+        "lat": 36.162
+      },
+      {
+        "lon": -119.9407,
+        "lat": 36.1473
+      },
+      {
+        "lon": -119.9486,
+        "lat": 36.1291
+      },
+      {
+        "lon": -119.972,
+        "lat": 36.1231
+      },
+      {
+        "lon": -119.9912,
+        "lat": 36.135
+      },
+      {
+        "lon": -120.0009,
+        "lat": 36.1484
+      },
+      {
+        "lon": -120.0054,
+        "lat": 36.162
+      },
+      {
+        "lon": -120.0057,
+        "lat": 36.1778
+      },
+      {
+        "lon": -119.9954,
+        "lat": 36.1949
+      }
+    ]
+  ],
+  "contextLayers": [
+    {
+      "layerId": "hls-s30-2026-10-17",
+      "title": "Sentinel-2 true colour (HLS S30, 30 m) · 17 Oct 2026",
+      "kind": "optical",
+      "date": "2026-10-17",
+      "stepId": null,
+      "crs": "EPSG:3857",
+      "bounds": [-120.7, 35.58, -119.48, 36.7],
+      "tileUrlTemplate": "mission-data/sinking-city/context/hls-s30/2026-10-17/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/HLS_S30_Nadir_BRDF_Adjusted_Reflectance/default/2026-10-17/GoogleMapsCompatible_Level12/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 8,
+        "maxZoom": 11
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "Harmonized Landsat and Sentinel-2 (HLS) S30 Nadir BRDF-Adjusted Reflectance, NASA LP DAAC; contains modified Copernicus Sentinel-2 data (ESA); via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer HLS_S30_Nadir_BRDF_Adjusted_Reflectance (EPSG:3857, GoogleMapsCompatible_Level12), daily true-colour for the stated date; HLS v2.0 (Masek et al., NASA LP DAAC, doi:10.5067/HLS/HLSS30.002). Bundled z8–11 (≈ 62 m/px at 36° N) for 2026-10-17, z8–10 for 2026-06-29. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "hls-s30-2026-06-29",
+      "title": "Sentinel-2 true colour (HLS S30, 30 m) · 29 Jun 2026",
+      "kind": "optical",
+      "date": "2026-06-29",
+      "stepId": "s06",
+      "crs": "EPSG:3857",
+      "bounds": [-120.7, 35.58, -119.48, 36.7],
+      "tileUrlTemplate": "mission-data/sinking-city/context/hls-s30/2026-06-29/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/HLS_S30_Nadir_BRDF_Adjusted_Reflectance/default/2026-06-29/GoogleMapsCompatible_Level12/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 8,
+        "maxZoom": 10
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "Harmonized Landsat and Sentinel-2 (HLS) S30 Nadir BRDF-Adjusted Reflectance, NASA LP DAAC; contains modified Copernicus Sentinel-2 data (ESA); via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer HLS_S30_Nadir_BRDF_Adjusted_Reflectance (EPSG:3857, GoogleMapsCompatible_Level12), daily true-colour for the stated date; HLS v2.0 (Masek et al., NASA LP DAAC, doi:10.5067/HLS/HLSS30.002). Bundled z8–11 (≈ 62 m/px at 36° N) for 2026-10-17, z8–10 for 2026-06-29. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "modis-terra-truecolor-2025-12-31",
+      "title": "MODIS Terra true colour · 31 Dec 2025 (overcast)",
+      "kind": "optical",
+      "date": "2025-12-31",
+      "stepId": "s01",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/modis-terra-truecolor/2025-12-31/{z}/{y}/{x}.jpg",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2025-12-31/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 5,
+        "maxZoom": 9
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "MODIS Terra Corrected Reflectance (True Color), NASA LANCE/EOSDIS, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer MODIS_Terra_CorrectedReflectance_TrueColor (EPSG:3857, GoogleMapsCompatible_Level9), daily composite for the step date. Real imagery (not simulated). Cloud/fog covers the valley on this date — the radar layer sees through it. GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "modis-terra-truecolor-2026-03-13",
+      "title": "MODIS Terra true colour · 13 Mar 2026",
+      "kind": "optical",
+      "date": "2026-03-13",
+      "stepId": "s03",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/modis-terra-truecolor/2026-03-13/{z}/{y}/{x}.jpg",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2026-03-13/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 5,
+        "maxZoom": 9
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "MODIS Terra Corrected Reflectance (True Color), NASA LANCE/EOSDIS, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer MODIS_Terra_CorrectedReflectance_TrueColor (EPSG:3857, GoogleMapsCompatible_Level9), daily composite for the step date. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "modis-terra-truecolor-2026-04-18",
+      "title": "MODIS Terra true colour · 18 Apr 2026",
+      "kind": "optical",
+      "date": "2026-04-18",
+      "stepId": "s04",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/modis-terra-truecolor/2026-04-18/{z}/{y}/{x}.jpg",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2026-04-18/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 5,
+        "maxZoom": 9
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "MODIS Terra Corrected Reflectance (True Color), NASA LANCE/EOSDIS, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer MODIS_Terra_CorrectedReflectance_TrueColor (EPSG:3857, GoogleMapsCompatible_Level9), daily composite for the step date. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "modis-terra-truecolor-2026-05-24",
+      "title": "MODIS Terra true colour · 24 May 2026",
+      "kind": "optical",
+      "date": "2026-05-24",
+      "stepId": "s05",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/modis-terra-truecolor/2026-05-24/{z}/{y}/{x}.jpg",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2026-05-24/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 5,
+        "maxZoom": 9
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "MODIS Terra Corrected Reflectance (True Color), NASA LANCE/EOSDIS, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer MODIS_Terra_CorrectedReflectance_TrueColor (EPSG:3857, GoogleMapsCompatible_Level9), daily composite for the step date. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "modis-terra-truecolor-2026-06-29",
+      "title": "MODIS Terra true colour · 29 Jun 2026",
+      "kind": "optical",
+      "date": "2026-06-29",
+      "stepId": "s06",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/modis-terra-truecolor/2026-06-29/{z}/{y}/{x}.jpg",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2026-06-29/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 5,
+        "maxZoom": 9
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "MODIS Terra Corrected Reflectance (True Color), NASA LANCE/EOSDIS, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer MODIS_Terra_CorrectedReflectance_TrueColor (EPSG:3857, GoogleMapsCompatible_Level9), daily composite for the step date. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "modis-terra-truecolor-2026-09-09",
+      "title": "MODIS Terra true colour · 9 Sep 2026",
+      "kind": "optical",
+      "date": "2026-09-09",
+      "stepId": "s08",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/modis-terra-truecolor/2026-09-09/{z}/{y}/{x}.jpg",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2026-09-09/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 5,
+        "maxZoom": 9
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "MODIS Terra Corrected Reflectance (True Color), NASA LANCE/EOSDIS, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer MODIS_Terra_CorrectedReflectance_TrueColor (EPSG:3857, GoogleMapsCompatible_Level9), daily composite for the step date. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "modis-terra-truecolor-2026-10-15",
+      "title": "MODIS Terra true colour · 15 Oct 2026",
+      "kind": "optical",
+      "date": "2026-10-15",
+      "stepId": "s09",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/modis-terra-truecolor/2026-10-15/{z}/{y}/{x}.jpg",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2026-10-15/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 5,
+        "maxZoom": 9
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "MODIS Terra Corrected Reflectance (True Color), NASA LANCE/EOSDIS, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer MODIS_Terra_CorrectedReflectance_TrueColor (EPSG:3857, GoogleMapsCompatible_Level9), daily composite for the step date. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "nisar-gcov-2025-12-31",
+      "title": "NISAR L-band backscatter (GCOV, false colour) · 31 Dec 2025",
+      "kind": "radar",
+      "date": "2025-12-31",
+      "stepId": "s01",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/nisar-gcov/2025-12-31/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/NISAR_L2_Geocoded_Polarimetric_Covariance/default/2025-12-31/GoogleMapsCompatible_Level13/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 6,
+        "maxZoom": 10
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "NISAR L2 GCOV normalized radar backscatter (false colour), NASA/JPL-Caltech & ISRO, ASF DAAC, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer NISAR_L2_Geocoded_Polarimetric_Covariance (EPSG:3857, GoogleMapsCompatible_Level13), daily 'best' composite for the step date; the AOI is imaged by track 042 descending frame 070 on these dates. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "nisar-gcov-2026-03-13",
+      "title": "NISAR L-band backscatter (GCOV, false colour) · 13 Mar 2026",
+      "kind": "radar",
+      "date": "2026-03-13",
+      "stepId": "s03",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/nisar-gcov/2026-03-13/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/NISAR_L2_Geocoded_Polarimetric_Covariance/default/2026-03-13/GoogleMapsCompatible_Level13/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 6,
+        "maxZoom": 10
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "NISAR L2 GCOV normalized radar backscatter (false colour), NASA/JPL-Caltech & ISRO, ASF DAAC, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer NISAR_L2_Geocoded_Polarimetric_Covariance (EPSG:3857, GoogleMapsCompatible_Level13), daily 'best' composite for the step date; the AOI is imaged by track 042 descending frame 070 on these dates. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "nisar-gcov-2026-04-18",
+      "title": "NISAR L-band backscatter (GCOV, false colour) · 18 Apr 2026",
+      "kind": "radar",
+      "date": "2026-04-18",
+      "stepId": "s04",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/nisar-gcov/2026-04-18/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/NISAR_L2_Geocoded_Polarimetric_Covariance/default/2026-04-18/GoogleMapsCompatible_Level13/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 6,
+        "maxZoom": 10
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "NISAR L2 GCOV normalized radar backscatter (false colour), NASA/JPL-Caltech & ISRO, ASF DAAC, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer NISAR_L2_Geocoded_Polarimetric_Covariance (EPSG:3857, GoogleMapsCompatible_Level13), daily 'best' composite for the step date; the AOI is imaged by track 042 descending frame 070 on these dates. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "nisar-gcov-2026-05-24",
+      "title": "NISAR L-band backscatter (GCOV, false colour) · 24 May 2026",
+      "kind": "radar",
+      "date": "2026-05-24",
+      "stepId": "s05",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/nisar-gcov/2026-05-24/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/NISAR_L2_Geocoded_Polarimetric_Covariance/default/2026-05-24/GoogleMapsCompatible_Level13/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 6,
+        "maxZoom": 10
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "NISAR L2 GCOV normalized radar backscatter (false colour), NASA/JPL-Caltech & ISRO, ASF DAAC, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer NISAR_L2_Geocoded_Polarimetric_Covariance (EPSG:3857, GoogleMapsCompatible_Level13), daily 'best' composite for the step date; the AOI is imaged by track 042 descending frame 070 on these dates. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "nisar-gcov-2026-06-29",
+      "title": "NISAR L-band backscatter (GCOV, false colour) · 29 Jun 2026",
+      "kind": "radar",
+      "date": "2026-06-29",
+      "stepId": "s06",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/nisar-gcov/2026-06-29/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/NISAR_L2_Geocoded_Polarimetric_Covariance/default/2026-06-29/GoogleMapsCompatible_Level13/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 6,
+        "maxZoom": 10
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "NISAR L2 GCOV normalized radar backscatter (false colour), NASA/JPL-Caltech & ISRO, ASF DAAC, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer NISAR_L2_Geocoded_Polarimetric_Covariance (EPSG:3857, GoogleMapsCompatible_Level13), daily 'best' composite for the step date; the AOI is imaged by track 042 descending frame 070 on these dates. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "nisar-gcov-2026-09-09",
+      "title": "NISAR L-band backscatter (GCOV, false colour) · 9 Sep 2026",
+      "kind": "radar",
+      "date": "2026-09-09",
+      "stepId": "s08",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/nisar-gcov/2026-09-09/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/NISAR_L2_Geocoded_Polarimetric_Covariance/default/2026-09-09/GoogleMapsCompatible_Level13/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 6,
+        "maxZoom": 10
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "NISAR L2 GCOV normalized radar backscatter (false colour), NASA/JPL-Caltech & ISRO, ASF DAAC, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer NISAR_L2_Geocoded_Polarimetric_Covariance (EPSG:3857, GoogleMapsCompatible_Level13), daily 'best' composite for the step date; the AOI is imaged by track 042 descending frame 070 on these dates. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    },
+    {
+      "layerId": "nisar-gcov-2026-10-15",
+      "title": "NISAR L-band backscatter (GCOV, false colour) · 15 Oct 2026",
+      "kind": "radar",
+      "date": "2026-10-15",
+      "stepId": "s09",
+      "crs": "EPSG:3857",
+      "bounds": [-120.5, 35.78, -119.68, 36.5],
+      "tileUrlTemplate": "mission-data/sinking-city/context/nisar-gcov/2026-10-15/{z}/{y}/{x}.png",
+      "onlineUrlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/NISAR_L2_Geocoded_Polarimetric_Covariance/default/2026-10-15/GoogleMapsCompatible_Level13/{z}/{y}/{x}.png",
+      "tiling": {
+        "tileMatrixSet": "GoogleMapsCompatible",
+        "minZoom": 6,
+        "maxZoom": 10
+      },
+      "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+      "attribution": "NISAR L2 GCOV normalized radar backscatter (false colour), NASA/JPL-Caltech & ISRO, ASF DAAC, via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+      "citation": "NASA GIBS layer NISAR_L2_Geocoded_Polarimetric_Covariance (EPSG:3857, GoogleMapsCompatible_Level13), daily 'best' composite for the step date; the AOI is imaged by track 042 descending frame 070 on these dates. Real imagery (not simulated). GIBS terms: https://nasa-gibs.github.io/gibs-api-docs/#data-use-guidance-and-acknowledgements"
+    }
+  ],
+  "legend": {
+    "ramp": ["#8F5236", "#C9784A", "#E2B08A"],
+    "labels": ["Low · 12–30 mm", "Mid · 30–55 mm", "High · 55 mm +"],
+    "unit": "mm LOS subsidence since 2025-12-31 (SIMULATED)",
+    "thresholds": [30, 55]
+  },
+  "camera": {
+    "home": {
+      "lon": -119.4,
+      "lat": 36.8,
+      "heightM": 1400000
+    },
+    "aoi": {
+      "lon": -120.09,
+      "lat": 36.14,
+      "heightM": 95000
+    }
+  },
+  "attributions": [
+    "Context imagery: We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+    "Blue Marble Shaded Relief and Bathymetry: NASA Earth Observatory (MODIS), via NASA GIBS.",
+    "HLS S30 Nadir BRDF-Adjusted Reflectance (Sentinel-2, 30 m): NASA LP DAAC (doi:10.5067/HLS/HLSS30.002), via NASA GIBS. Contains modified Copernicus Sentinel-2 data (ESA).",
+    "MODIS Terra Corrected Reflectance (True Color): NASA LANCE / EOSDIS, via NASA GIBS.",
+    "NISAR L2 GCOV backscatter: NASA/JPL-Caltech & ISRO, ASF DAAC, via NASA GIBS.",
+    "NISAR acquisition dates, track, frame and orbit direction: NISAR catalogue, NASA CMR / ASF DAAC (collection C2854335566-ASF).",
+    "Displacement and coherence values: SIMULATED by BlindRev data-forge — not NISAR measurements.",
+    "Reference change mask: authored by BlindRev (mission answer key, not a scientific product).",
+    "NISAR orbit: CelesTrak GP data (NORAD 65053), propagated with SGP4 (satellite.js).",
+    "Globe: CesiumJS (Apache-2.0); Cesium ion / Cesium World Terrain when a token is configured.",
+    "Case background: NISAR StoryMaps 'Land Subsidence' (Peacock, An, Pinto & Lou 2024, doi:10.5281/zenodo.10818833); Miller et al. 2020; Jones et al. 2020."
+  ]
+}

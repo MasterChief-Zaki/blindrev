@@ -1,0 +1,238 @@
+/* UX strike 1 — menu life, focus ring, hub prompt, data tunnel. Imported by Menu.tsx / Hub.tsx / Transit.tsx
+ * (loaded after app.css, so equal-specificity rules here win). DOM stays matte: the only light here is the
+ * owner's background plate breathing on a Canvas2D layer — no glow on any HUD element. */
+
+/* ---------------------------------------------------------------- Menu: plate life + parallax */
+.menu {
+  --px: 0;
+  --py: 0;
+}
+.menu .plate,
+.menu__ambience {
+  /* overscan so the parallax never exposes an edge */
+  inset: -1.5%;
+  transform: translate3d(calc(var(--px) * -10px), calc(var(--py) * -6px), 0);
+  will-change: transform;
+}
+.menu__ambience {
+  position: absolute;
+  width: 103%;
+  height: 103%;
+  max-width: none;
+  pointer-events: none;
+}
+.menu__wordmark,
+.menu__nav {
+  transform: translate3d(calc(var(--px) * 5px), calc(var(--py) * 3px), 0);
+}
+.menu__wordmark {
+  animation: menu-rise 700ms var(--ease) both;
+}
+.menu__nav {
+  animation: menu-rise 700ms var(--ease) 120ms both;
+}
+.menu__hint,
+.menu__credit {
+  animation: menu-fade 900ms var(--ease) 260ms both;
+}
+@keyframes menu-rise {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes menu-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------------------------------------------------------------- Menu: tactile items, no box on the default selection */
+.menu .br-menu__item {
+  transform-origin: 50% 55%;
+  transition:
+    color var(--motion-touch) var(--ease),
+    transform var(--motion-control) var(--ease),
+    letter-spacing var(--motion-control) var(--ease);
+}
+.menu .br-menu__item.is-selected {
+  transform: scale(1.08);
+  letter-spacing: 0.012em;
+}
+.menu .br-menu__item.is-selected:active {
+  transform: scale(1.03);
+  transition-duration: 60ms;
+}
+/* The owner's mockup: selection = cyan + heavier text, never a rectangle. The ring appears only once the
+ * player is really driving with the keyboard (data-kbd is set on keydown, cleared on pointer use). */
+.menu:not([data-kbd]) .br-menu__item:focus-visible {
+  outline: none;
+}
+.menu[data-kbd] .br-menu__item:focus-visible {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
+
+/* ---------------------------------------------------------------- Hub: first-time prompt + focus token */
+.hub .case-chip:focus-visible {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
+/* Case chips: names never truncate (they wrap); the open case is the one presented as selected at rest;
+ * a locked case under hover/focus gets a dim outline + its lock, never the cyan "selected and playable" look. */
+.hub .case-chip__title {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  text-wrap: balance;
+}
+.hub .case-chip:not(.is-locked) {
+  border-color: rgba(61, 224, 208, 0.55);
+}
+.hub .case-chip.is-rest,
+.hub .case-chip:not(.is-locked):hover,
+.hub .case-chip:not(.is-locked).is-focus {
+  border-color: var(--color-cyan);
+  background: var(--color-active);
+  box-shadow: inset 3px 0 0 var(--color-cyan);
+}
+.hub .case-chip.is-locked:hover,
+.hub .case-chip.is-locked.is-focus {
+  border-color: var(--color-line-strong);
+  border-style: dashed;
+  background: var(--color-graphite);
+}
+.hub .case-chip.is-locked .case-chip__id {
+  color: var(--color-text-faint);
+}
+@media (max-width: 1440px), (max-height: 820px) {
+  /* The owner's real window is ~1260×760: give the case list the room, let the pitch run under the
+   * title + button at full column width, keep the lock/open state visible (never colour alone). */
+  .hub .hub__band {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 0.74fr);
+    max-height: none;
+  }
+  .hub .hub__case {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 4px;
+  }
+  .hub .hub__case > button {
+    grid-row: 1;
+  }
+  .hub .hub__case .hub__pitch {
+    grid-column: 1 / -1;
+    margin: 0;
+    -webkit-line-clamp: 2;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .hub .case-chip {
+    padding: 6px 8px;
+  }
+  .hub .case-chip__state {
+    display: inline-flex;
+    font-size: 10px;
+  }
+  .hub .hub__nisarLine {
+    font-size: 13px;
+  }
+}
+.hub__prompt {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-8);
+  background: var(--scrim-strong, rgba(14, 16, 32, 0.86));
+  color: var(--color-pearl);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: hub-prompt-in 500ms var(--ease) 900ms both;
+}
+.hub__prompt svg {
+  color: var(--color-amber);
+  flex: none;
+}
+.hub__promptKeys {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(243, 245, 247, 0.78);
+}
+@keyframes hub-prompt-in {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@media (max-height: 800px) {
+  .hub__prompt {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+/* ---------------------------------------------------------------- Data tunnel */
+.tunnel .tunnel__label {
+  bottom: 6vh;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+.tunnel .tunnel__label::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 0 auto 12px;
+  background: var(--color-cyan);
+  transform: skewX(-28deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu__wordmark,
+  .menu__nav,
+  .menu__hint,
+  .menu__credit,
+  .hub__prompt {
+    animation: none;
+  }
+}
+.menu.is-still .plate,
+.menu.is-still .menu__ambience,
+.menu.is-still .menu__wordmark,
+.menu.is-still .menu__nav {
+  transform: none;
+}
+.menu.is-still .menu__wordmark,
+.menu.is-still .menu__nav,
+.menu.is-still .menu__hint,
+.menu.is-still .menu__credit,
+.menu.is-still .br-menu__item,
+.hub.is-still .hub__prompt {
+  animation: none;
+  transition: color var(--motion-touch) var(--ease);
+}
+.menu.is-still .br-menu__item.is-selected {
+  transform: none;
+}

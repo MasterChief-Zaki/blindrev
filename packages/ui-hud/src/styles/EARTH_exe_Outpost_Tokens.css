@@ -1,0 +1,118 @@
+/* EARTH.exe — Outpost Signal design tokens (canonical).
+ * Locked HEX values from the brand guide (p4/p5/p10). Do not tint the locked colours;
+ * derived values below are documented mixes used only for lines, layers and state fills.
+ * Owner: agent U (@blindrev/ui-hud). */
+:root {
+  /* ---- Core colour (locked HEX) ---- */
+  --color-ink: #0e1020; /* hub background, layer 00, 60 % */
+  --color-graphite: #1c2036; /* panels and cards, layer 01, 20 % */
+  --color-pearl: #f3f5f7; /* text on dark, 10 % */
+  --color-cyan: #3de0d0; /* instrument: scan, select, focus, primary */
+  --color-magenta: #e0489b; /* fabric accent + danger */
+  --color-amber: #f2b441; /* task light: objectives, labels, alerts */
+  --color-indigo: #6c5ce7; /* depth accent, secondary highlights (never behind pearl text) */
+
+  /* ---- Derived layers + lines (matte; elevation by layer colour, never by glow) ---- */
+  --color-active: #272c47; /* layer 02 / ACTIVE — raised surface on graphite */
+  --color-active-hi: #313756; /* hover on layer 02 */
+  --color-line: rgba(243, 245, 247, 0.14); /* hairline on graphite */
+  --color-line-strong: rgba(243, 245, 247, 0.28);
+  --color-text: var(--color-pearl);
+  --color-text-muted: #b4bacb; /* 8.3:1 on graphite, 9.7:1 on ink */
+  --color-text-faint: #8d94ab; /* 5.3:1 on graphite, 6.3:1 on ink */
+  --color-cyan-hover: #6be8dc; /* cyan mixed 20 % toward pearl */
+  --color-cyan-press: #2fb8ab; /* cyan mixed 18 % toward ink */
+  --color-magenta-hover: #e66daf;
+  --color-magenta-press: #b93c81;
+  --color-amber-dim: rgba(242, 180, 65, 0.16);
+  --color-cyan-dim: rgba(61, 224, 208, 0.14);
+  --color-magenta-dim: rgba(224, 72, 155, 0.16);
+
+  /* ---- Scrims (text over imagery always sits on one; ≥ 4.5:1 for pearl text) ---- */
+  --scrim-strong: rgba(14, 16, 32, 0.86);
+  --scrim: rgba(14, 16, 32, 0.74);
+  --scrim-soft: rgba(14, 16, 32, 0.55);
+
+  /* ---- Terrain / data ramps (matte, 3-step; never glow, never carry text) ---- */
+  --ramp-subsidence-1: #8f5236;
+  --ramp-subsidence-2: #c9784a;
+  --ramp-subsidence-3: #e2b08a;
+  --ramp-forest-1: #2f6b4c;
+  --ramp-forest-2: #4f8f6a;
+  --ramp-forest-3: #8dbf8a;
+  --ramp-glacier-1: #8fb8d4;
+  --ramp-glacier-2: #bfe3f2;
+  --ramp-glacier-3: #eaf6fb;
+  --ramp-wetland-1: #2a7471;
+  --ramp-wetland-2: #3e9c9a;
+  --ramp-wetland-3: #8ccfc8;
+
+  /* ---- Type ---- */
+  --font-heading: "Outfit", Arial, sans-serif;
+  --font-display: "Outfit", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+
+  /* Compact game-HUD scale (rem; 1rem = 16 px at 100 % text size). Derived from the
+   * guide's mobile column — the desktop column is TV-scale for 1920 px boards. */
+  --fs-display: 3rem; /* 48 / 800 / 1.04 / -0.02em  cover, hero */
+  --fs-h1: 2.25rem; /* 36 / 800 / 1.10 / -0.02em  page title */
+  --fs-h2: 1.75rem; /* 28 / 600 / 1.15 / -0.01em  section / modal title */
+  --fs-h3: 1.375rem; /* 22 / 600 / 1.20            card heading */
+  --fs-h4: 1.125rem; /* 18 / 600 / 1.25            panel heading */
+  --fs-body-l: 1.125rem; /* 18 / 400 / 1.50            introduction */
+  --fs-body: 1rem; /* 16 / 400 / 1.50            instructions, body */
+  --fs-body-s: 0.9375rem; /* 15 / 400 / 1.50            supporting copy */
+  --fs-caption: 0.875rem; /* 14 / 400 / 1.40            annotation */
+  --fs-label: 0.8125rem; /* 13 / 600 / 1.20 / 0.04em   short UI label (caps) */
+  --fs-mono: 0.875rem; /* 14 / 400 / 1.40            date / telemetry */
+  --fs-mono-s: 0.8125rem; /* 13 / 400 / 1.30            dense telemetry, axis labels */
+  --lh-tight: 1.1;
+  --lh-heading: 1.2;
+  --lh-body: 1.5;
+  --tracking-label: 0.04em;
+  --tracking-display: -0.02em;
+
+  /* ---- Space (4 px base, 8 px rhythm) ---- */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --hud-inset: 48px; /* HUD edge inset */
+  --panel-pad: 24px; /* compact HUD panel padding (guide: 32 desktop / 24 mobile) */
+
+  /* ---- Shape ---- */
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --chamfer: 24px; /* mission / scanner / research panels only */
+  --stroke-icon: 2px;
+  --target-min: 44px; /* WCAG 2.5.5 / 2.5.8 — every interactive target */
+
+  /* ---- Motion ---- */
+  --motion-touch: 120ms; /* hover, press, tap */
+  --motion-control: 200ms; /* toggles, tabs, selection */
+  --motion-panel: 320ms; /* drawers, modals, scan-in */
+  --motion-scene: 500ms; /* travel wipe, camera settle */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* ---- Focus ---- */
+  --focus-width: 2px;
+  --focus-offset: 5px;
+  --focus-color: var(--color-cyan);
+
+  /* ---- Z layers ---- */
+  --z-canvas: 0;
+  --z-hud: 10;
+  --z-panel: 20;
+  --z-tooltip: 40;
+  --z-modal: 100;
+  --z-wipe: 200;
+  --z-live: 300;
+}

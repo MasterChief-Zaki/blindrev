@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlindRev — hub sandbox</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #0e1020; overflow: hidden; }
+      #hub { position: fixed; inset: 0; }
+      #status { position: fixed; left: 8px; bottom: 8px; font: 12px/1.4 "IBM Plex Mono", Consolas, monospace; color: #f3f5f7; opacity: 0.75; pointer-events: none; white-space: pre; }
+      body.clean #status { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="hub"></div>
+    <div id="status">loading…</div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

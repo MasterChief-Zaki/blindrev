@@ -1,0 +1,13 @@
+#!/bin/sh
+# BlindRev pre-commit: fast, staged-files-only Biome format + lint check (SPEC §14).
+# Fix formatting with `pnpm format`; bypass only in emergencies.
+if [ ! -f node_modules/.bin/biome ] && [ ! -f node_modules/.bin/biome.CMD ]; then
+  echo "[pre-commit] biome not installed (run pnpm install); skipping"
+  exit 0
+fi
+pnpm exec biome check --staged --no-errors-on-unmatched --files-ignore-unknown=true
+status=$?
+if [ $status -ne 0 ]; then
+  echo "[pre-commit] Biome found problems in staged files. Run 'pnpm format' (formatting) or fix the lint errors, then re-stage."
+fi
+exit $status

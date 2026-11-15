@@ -1,0 +1,8 @@
+{
+  "license": "CC0-1.0 (BlindRev data-forge output; AUTHORED answer key, deterministic)",
+  "attribution": "AUTHORED by BlindRev (mission answer key: hand-authored polygons rasterised by data-forge). Not simulated data and not a scientific product.",
+  "source": "packages/data-forge/src/reference.ts",
+  "notes": "AUTHORED reference change mask (mission answer key, not a scientific product): polygons rasterised by pixel-centre containment (even-odd) on the 512×512 grid.",
+  "deterministic": true,
+  "generator": "@blindrev/data-forge data-forge-1 (pnpm --filter @blindrev/data-forge forge)"
+}

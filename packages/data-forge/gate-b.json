@@ -1,0 +1,274 @@
+{
+  "sources": {
+    "basemap/bluemarble": {
+      "req": 1403,
+      "failed": 0,
+      "bytes": 11251760,
+      "empty": 0,
+      "dates": 1
+    },
+    "context/hls-s30": {
+      "req": 148,
+      "failed": 0,
+      "bytes": 19689020,
+      "empty": 0,
+      "dates": 2
+    },
+    "context/modis-terra-truecolor": {
+      "req": 56,
+      "failed": 0,
+      "bytes": 568427,
+      "empty": 0,
+      "dates": 7
+    },
+    "context/nisar-gcov": {
+      "req": 112,
+      "failed": 0,
+      "bytes": 9954832,
+      "empty": 7,
+      "dates": 7
+    }
+  },
+  "qaCoverage": [
+    {
+      "stepId": "s01",
+      "available": true,
+      "validPixels": 203217,
+      "coverage": 0.7752113342285156
+    },
+    {
+      "stepId": "s02",
+      "available": false
+    },
+    {
+      "stepId": "s03",
+      "available": true,
+      "validPixels": 201442,
+      "coverage": 0.7684402465820312
+    },
+    {
+      "stepId": "s04",
+      "available": true,
+      "validPixels": 203784,
+      "coverage": 0.777374267578125
+    },
+    {
+      "stepId": "s05",
+      "available": true,
+      "validPixels": 197872,
+      "coverage": 0.75482177734375
+    },
+    {
+      "stepId": "s06",
+      "available": true,
+      "validPixels": 199918,
+      "coverage": 0.7626266479492188
+    },
+    {
+      "stepId": "s07",
+      "available": false
+    },
+    {
+      "stepId": "s08",
+      "available": true,
+      "validPixels": 203356,
+      "coverage": 0.7757415771484375
+    },
+    {
+      "stepId": "s09",
+      "available": true,
+      "validPixels": 204851,
+      "coverage": 0.7814445495605469
+    }
+  ],
+  "registration": {
+    "differingPixels": 0,
+    "referencePixels": 13626,
+    "areaKm2": 167.35394065186125
+  },
+  "forgeDeterminism": {
+    "identical": 49,
+    "total": 49,
+    "vsRepo": 49
+  },
+  "scoring": [
+    {
+      "case": "reference polygons themselves (both rings)",
+      "pair": "s01->s09",
+      "outcome": {
+        "kind": "SCORE",
+        "iou": 1,
+        "precision": 1,
+        "recall": 1,
+        "tier": "PASS",
+        "advisory": [],
+        "roiPixels": 13626,
+        "validPixels": 9950,
+        "coverage": 0.7302216351093498,
+        "tp": 9950,
+        "fp": 0,
+        "fn": 0,
+        "digest": "68684a71ffeb865f65ef50250600e242891f632e4493c845327df0169de49bfa"
+      },
+      "stable": true
+    },
+    {
+      "case": "main bowl polygon only",
+      "pair": "s01->s09",
+      "outcome": {
+        "kind": "SCORE",
+        "iou": 0.7991959798994975,
+        "precision": 1,
+        "recall": 0.7991959798994975,
+        "tier": "PASS",
+        "advisory": [],
+        "roiPixels": 10734,
+        "validPixels": 7952,
+        "coverage": 0.7408235513322153,
+        "tp": 7952,
+        "fp": 0,
+        "fn": 1998,
+        "digest": "ffb9fab1119ae40cae71b38d269c56996204cc16e37a01ca547228ae2cf652c4"
+      },
+      "stable": true
+    },
+    {
+      "case": "main bowl scaled ×1.3 (sloppy, generous)",
+      "pair": "s01->s09",
+      "outcome": {
+        "kind": "SCORE",
+        "iou": 0.4980583740448453,
+        "precision": 0.5693012600229095,
+        "recall": 0.7991959798994975,
+        "tier": "PARTIAL",
+        "advisory": ["Precision 56.9% (recall 79.9%): much of your zone shows no change. Try tightening it."],
+        "roiPixels": 18131,
+        "validPixels": 13968,
+        "coverage": 0.770393249131322,
+        "tp": 7952,
+        "fp": 6016,
+        "fn": 1998,
+        "digest": "fd0976ffc78b60c46d31a9db69aea6f70800dd866e6fa111ab1a0c3ced2dd9d4"
+      },
+      "stable": true
+    },
+    {
+      "case": "main bowl scaled ×0.7 (too tight)",
+      "pair": "s01->s09",
+      "outcome": {
+        "kind": "SCORE",
+        "iou": 0.3760804020100503,
+        "precision": 1,
+        "recall": 0.3760804020100503,
+        "tier": "PARTIAL",
+        "advisory": ["Recall 37.6% (precision 100.0%): your zone misses part of the change. Try widening it."],
+        "roiPixels": 5263,
+        "validPixels": 3742,
+        "coverage": 0.7110013300399012,
+        "tp": 3742,
+        "fp": 0,
+        "fn": 6208,
+        "digest": "29d21466951a10e52a992982a9f308df1a5e7b9f182f1cc5352117384b6d5cb3"
+      },
+      "stable": true
+    },
+    {
+      "case": "main bowl shifted 0.05° east (~4.5 km)",
+      "pair": "s01->s09",
+      "outcome": {
+        "kind": "SCORE",
+        "iou": 0.3856715502032676,
+        "precision": 0.6195933456561923,
+        "recall": 0.5053266331658292,
+        "tier": "PARTIAL",
+        "advisory": ["Recall 50.5% (precision 62.0%): your zone misses part of the change. Try widening it."],
+        "roiPixels": 10729,
+        "validPixels": 8115,
+        "coverage": 0.756361263864293,
+        "tp": 5028,
+        "fp": 3087,
+        "fn": 4922,
+        "digest": "111f27930f38942b02e1fd6b711fb6b567be5e6f7da785fc72af22478eb46600"
+      },
+      "stable": true
+    },
+    {
+      "case": "box around everything coloured on s09",
+      "pair": "s01->s09",
+      "outcome": {
+        "kind": "SCORE",
+        "iou": 0.28401792595552766,
+        "precision": 0.28401792595552766,
+        "recall": 1,
+        "tier": "FAIL",
+        "advisory": ["Precision 28.4% (recall 100.0%): much of your zone shows no change. Try tightening it."],
+        "roiPixels": 45507,
+        "validPixels": 35033,
+        "coverage": 0.7698376074010592,
+        "tp": 9950,
+        "fp": 25083,
+        "fn": 0,
+        "digest": "29c43aaaf565ad92b158ff2537a6c5e12f183119e1792f76433ec091d246d5be"
+      },
+      "stable": true
+    },
+    {
+      "case": "decoy: s08 single-date blob near Kettleman City",
+      "pair": "s01->s08",
+      "outcome": {
+        "kind": "SCORE",
+        "iou": 0,
+        "precision": 0,
+        "recall": 0,
+        "tier": "FAIL",
+        "advisory": [
+          "Precision 0.0% (recall 0.0%): much of your zone shows no change. Try tightening it.",
+          "Recall 0.0% (precision 0.0%): your zone misses part of the change. Try widening it."
+        ],
+        "roiPixels": 6247,
+        "validPixels": 5597,
+        "coverage": 0.8959500560268929,
+        "tp": 0,
+        "fp": 5597,
+        "fn": 9674,
+        "digest": "dae58565a9ba49a20667280b498afc726cdadb5dcacc62642ded7d2024bbe498"
+      },
+      "stable": true
+    },
+    {
+      "case": "persistent low-coherence zone (west)",
+      "pair": "s01->s09",
+      "outcome": {
+        "kind": "QA_DIAGNOSTIC",
+        "code": "LOW_COHERENCE",
+        "message": "Low interferometric coherence in selected zone; inspect high-coherence mask",
+        "coverage": 0,
+        "validPixels": 0,
+        "roiPixels": 4007
+      },
+      "stable": true
+    },
+    {
+      "case": "same step twice (Δt = 0)",
+      "pair": "s09->s09",
+      "outcome": {
+        "kind": "REJECTED",
+        "code": "DT_TOO_SHORT",
+        "message": "These dates are 0 days apart. Pick two at least 24 days apart so change has time to show."
+      },
+      "stable": true
+    },
+    {
+      "case": "pair with a no-acquisition step",
+      "pair": "s01->s07",
+      "outcome": {
+        "kind": "REJECTED",
+        "code": "STEP_UNAVAILABLE",
+        "message": "There's no acquisition on 2026-08-04. Pick two dates that have data."
+      },
+      "stable": true
+    }
+  ],
+  "noAcquisition": ["s02", "s07"],
+  "interpolatedSteps": 0
+}

@@ -1,0 +1,1433 @@
+{
+  "scenario": "measure",
+  "startedAt": "2026-11-15T20:26:56.356Z",
+  "exe": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\packages\\app-shell\\src-tauri\\target\\release\\blindrev.exe",
+  "exeBytes": 66766848,
+  "cdpVersion": {
+    "Browser": "Edg/157.0.4341.46",
+    "File-Path-Style": "windows",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+    "V8-Version": "15.7.11.4",
+    "WebKit-Version": "537.36 (@a0c6bd61d7884b3c402a34c67d05100107a9e5e4)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9333/devtools/browser/5e3e5c87-66e8-4805-b0c8-ed0ebfc892b6"
+  },
+  "appOrigin": "http://tauri.localhost",
+  "env": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+    "viewport": {
+      "w": 1260,
+      "h": 760,
+      "dpr": 2
+    },
+    "screen": {
+      "w": 1280,
+      "h": 800,
+      "availW": 1280,
+      "availH": 800
+    },
+    "webgl2": true,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D18) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "vendor": "Google Inc. (NVIDIA)",
+    "isTauri": true,
+    "baseURI": "http://tauri.localhost/",
+    "precisePerfMemory": true
+  },
+  "measure": {
+    "hubCanvas": {
+      "w": 2472,
+      "h": 1491,
+      "cssW": 1260,
+      "cssH": 760
+    },
+    "hubFrames": {
+      "count": 3293,
+      "p50Ms": 6.099999999998545,
+      "p95Ms": 6.200000000000728,
+      "meanFps": 164.70270486555697,
+      "route": "menu"
+    },
+    "missionSceneReady": true,
+    "missionCanvas": {
+      "w": 1260,
+      "h": 760,
+      "cssW": 1260,
+      "cssH": 760
+    },
+    "globeStatus": {
+      "terrain": "ELLIPSOID",
+      "imagery": "ONLINE",
+      "offline": false,
+      "contextLost": false,
+      "sceneReady": true,
+      "logDepth": true,
+      "webgl2": true,
+      "message": "Ellipsoid terrain — no ion token"
+    },
+    "missionFrames": {
+      "count": 3288,
+      "p50Ms": 6.099999999998545,
+      "p95Ms": 6.200000000004366,
+      "meanFps": 164.4016440164402,
+      "route": "mission"
+    },
+    "contextLossGlobe": {
+      "cycles": 10,
+      "unrecovered": 0,
+      "recoveryMs": [108, 114, 110, 108, 118, 114, 110, 99, 115, 132],
+      "p95RecoveryMs": 131.5,
+      "maxRecoveryMs": 131.5,
+      "scene": "mission/cesium",
+      "status": "PASS"
+    },
+    "globeAfterCtxLoss": {
+      "terrain": "ELLIPSOID",
+      "imagery": "ONLINE",
+      "offline": false,
+      "contextLost": false,
+      "sceneReady": true,
+      "logDepth": true,
+      "webgl2": true,
+      "message": "Ellipsoid terrain — no ion token"
+    },
+    "routeTimingsAll": [
+      {
+        "from": "menu",
+        "to": "hub",
+        "blankMs": 596.4,
+        "readyMs": 575.4,
+        "coverMs": 504.5,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:26:58.271Z"
+      },
+      {
+        "from": "hub",
+        "to": "menu",
+        "blankMs": 17.5,
+        "readyMs": 0,
+        "coverMs": 501.1,
+        "slow": false,
+        "impl": "dom",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:27:09.155Z"
+      },
+      {
+        "from": "menu",
+        "to": "mission",
+        "blankMs": 731.2,
+        "readyMs": 721,
+        "coverMs": 501.7,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:27:24.021Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 369.5,
+        "readyMs": 357.1,
+        "coverMs": 503.3,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:27:57.093Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1212.4,
+        "readyMs": 382.2,
+        "coverMs": 502.6,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:00.135Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 428.7,
+        "readyMs": 409.8,
+        "coverMs": 500.4,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:02.382Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1207.3,
+        "readyMs": 409.2,
+        "coverMs": 503.1,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:05.404Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 321.3,
+        "readyMs": 307.8,
+        "coverMs": 502.6,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:07.547Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.8,
+        "readyMs": 353.7,
+        "coverMs": 502.4,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:10.565Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 302.2,
+        "readyMs": 290.1,
+        "coverMs": 502.2,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:12.679Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.4,
+        "readyMs": 337.4,
+        "coverMs": 504.9,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:15.710Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 303.3,
+        "readyMs": 293.4,
+        "coverMs": 501.7,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:17.832Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.2,
+        "readyMs": 372.2,
+        "coverMs": 502.6,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:20.856Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 307.6,
+        "readyMs": 296.5,
+        "coverMs": 501.3,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:22.982Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.9,
+        "readyMs": 357.5,
+        "coverMs": 505.6,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:26.013Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 381,
+        "readyMs": 365.4,
+        "coverMs": 504,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:28.207Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1206.6,
+        "readyMs": 459.5,
+        "coverMs": 502.3,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:31.235Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 304.9,
+        "readyMs": 295.2,
+        "coverMs": 505.8,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:33.360Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1206.2,
+        "readyMs": 292.7,
+        "coverMs": 502.9,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:36.377Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 294.4,
+        "readyMs": 285.2,
+        "coverMs": 502.2,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:38.483Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1210.6,
+        "readyMs": 376,
+        "coverMs": 501.1,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:41.509Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 298.8,
+        "readyMs": 287.8,
+        "coverMs": 505.6,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:43.633Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.9,
+        "readyMs": 325.6,
+        "coverMs": 500.7,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:46.662Z"
+      }
+    ],
+    "routeTimingsSwitchRun": [
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 369.5,
+        "readyMs": 357.1,
+        "coverMs": 503.3,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:27:57.093Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1212.4,
+        "readyMs": 382.2,
+        "coverMs": 502.6,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:00.135Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 428.7,
+        "readyMs": 409.8,
+        "coverMs": 500.4,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:02.382Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1207.3,
+        "readyMs": 409.2,
+        "coverMs": 503.1,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:05.404Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 321.3,
+        "readyMs": 307.8,
+        "coverMs": 502.6,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:07.547Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.8,
+        "readyMs": 353.7,
+        "coverMs": 502.4,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:10.565Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 302.2,
+        "readyMs": 290.1,
+        "coverMs": 502.2,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:12.679Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.4,
+        "readyMs": 337.4,
+        "coverMs": 504.9,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:15.710Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 303.3,
+        "readyMs": 293.4,
+        "coverMs": 501.7,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:17.832Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.2,
+        "readyMs": 372.2,
+        "coverMs": 502.6,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:20.856Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 307.6,
+        "readyMs": 296.5,
+        "coverMs": 501.3,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:22.982Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.9,
+        "readyMs": 357.5,
+        "coverMs": 505.6,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:26.013Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 381,
+        "readyMs": 365.4,
+        "coverMs": 504,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:28.207Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1206.6,
+        "readyMs": 459.5,
+        "coverMs": 502.3,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:31.235Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 304.9,
+        "readyMs": 295.2,
+        "coverMs": 505.8,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:33.360Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1206.2,
+        "readyMs": 292.7,
+        "coverMs": 502.9,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:36.377Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 294.4,
+        "readyMs": 285.2,
+        "coverMs": 502.2,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:38.483Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1210.6,
+        "readyMs": 376,
+        "coverMs": 501.1,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:41.509Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 298.8,
+        "readyMs": 287.8,
+        "coverMs": 505.6,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:43.633Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1205.9,
+        "readyMs": 325.6,
+        "coverMs": 500.7,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:28:46.662Z"
+      }
+    ],
+    "wipeTraceSwitches": [
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1375.8,
+        "coverMs": 503,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 363.8,
+        "tunnelVisibleMs": 0,
+        "revealMs": 509,
+        "maxFrameGapDuringHoldMs": 54.6,
+        "harnessBlankMs": 369.5,
+        "harnessReadyMs": 357.1
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2218.2,
+        "coverMs": 503,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1212.1,
+        "tunnelVisibleMs": 1200.1,
+        "revealMs": 503.1,
+        "maxFrameGapDuringHoldMs": 109.1,
+        "harnessBlankMs": 1212.4,
+        "harnessReadyMs": 382.2
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1436.3,
+        "coverMs": 503.1,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 424.2,
+        "tunnelVisibleMs": 0,
+        "revealMs": 509,
+        "maxFrameGapDuringHoldMs": 72.8,
+        "harnessBlankMs": 428.7,
+        "harnessReadyMs": 409.8
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2212,
+        "coverMs": 503,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1206.1,
+        "tunnelVisibleMs": 1200,
+        "revealMs": 502.9,
+        "maxFrameGapDuringHoldMs": 115.2,
+        "harnessBlankMs": 1207.3,
+        "harnessReadyMs": 409.2
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1327.2,
+        "coverMs": 502.8,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 315.3,
+        "tunnelVisibleMs": 0,
+        "revealMs": 509.1,
+        "maxFrameGapDuringHoldMs": 60.5,
+        "harnessBlankMs": 321.3,
+        "harnessReadyMs": 307.8
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2211.9,
+        "coverMs": 502.6,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1206.1,
+        "tunnelVisibleMs": 1200.1,
+        "revealMs": 503.2,
+        "maxFrameGapDuringHoldMs": 103.2,
+        "harnessBlankMs": 1205.8,
+        "harnessReadyMs": 353.7
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1308.8,
+        "coverMs": 502.8,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 296.9,
+        "tunnelVisibleMs": 0,
+        "revealMs": 509.1,
+        "maxFrameGapDuringHoldMs": 42.4,
+        "harnessBlankMs": 302.2,
+        "harnessReadyMs": 290.1
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2218.2,
+        "coverMs": 509,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1206.2,
+        "tunnelVisibleMs": 1200.1,
+        "revealMs": 503,
+        "maxFrameGapDuringHoldMs": 60.7,
+        "harnessBlankMs": 1205.4,
+        "harnessReadyMs": 337.4
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1309,
+        "coverMs": 502.8,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 297,
+        "tunnelVisibleMs": 0,
+        "revealMs": 509.2,
+        "maxFrameGapDuringHoldMs": 42.6,
+        "harnessBlankMs": 303.3,
+        "harnessReadyMs": 293.4
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2212.1,
+        "coverMs": 502.9,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1206.1,
+        "tunnelVisibleMs": 1200.1,
+        "revealMs": 503.1,
+        "maxFrameGapDuringHoldMs": 109,
+        "harnessBlankMs": 1205.2,
+        "harnessReadyMs": 372.2
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1309,
+        "coverMs": 503,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 302.9,
+        "tunnelVisibleMs": 0,
+        "revealMs": 503.1,
+        "maxFrameGapDuringHoldMs": 42.3,
+        "harnessBlankMs": 307.6,
+        "harnessReadyMs": 296.5
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2218.2,
+        "coverMs": 509,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1206.1,
+        "tunnelVisibleMs": 1200.1,
+        "revealMs": 503.1,
+        "maxFrameGapDuringHoldMs": 72.5,
+        "harnessBlankMs": 1205.9,
+        "harnessReadyMs": 357.5
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1388.1,
+        "coverMs": 503,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 375.8,
+        "tunnelVisibleMs": 0,
+        "revealMs": 509.3,
+        "maxFrameGapDuringHoldMs": 72.9,
+        "harnessBlankMs": 381,
+        "harnessReadyMs": 365.4
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2212,
+        "coverMs": 503,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1206,
+        "tunnelVisibleMs": 1200,
+        "revealMs": 503,
+        "maxFrameGapDuringHoldMs": 157.6,
+        "harnessBlankMs": 1206.6,
+        "harnessReadyMs": 459.5
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1315.1,
+        "coverMs": 509.1,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 296.9,
+        "tunnelVisibleMs": 0,
+        "revealMs": 509.1,
+        "maxFrameGapDuringHoldMs": 42.5,
+        "harnessBlankMs": 304.9,
+        "harnessReadyMs": 295.2
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2212.2,
+        "coverMs": 502.9,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1206.3,
+        "tunnelVisibleMs": 1200,
+        "revealMs": 503,
+        "maxFrameGapDuringHoldMs": 48.6,
+        "harnessBlankMs": 1206.2,
+        "harnessReadyMs": 292.7
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1303.2,
+        "coverMs": 503.1,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 284.8,
+        "tunnelVisibleMs": 0,
+        "revealMs": 515.3,
+        "maxFrameGapDuringHoldMs": 36.4,
+        "harnessBlankMs": 294.4,
+        "harnessReadyMs": 285.2
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2218.1,
+        "coverMs": 503,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1224.2,
+        "tunnelVisibleMs": 1200,
+        "revealMs": 490.9,
+        "maxFrameGapDuringHoldMs": 127.3,
+        "harnessBlankMs": 1210.6,
+        "harnessReadyMs": 376
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "totalMs": 1309.3,
+        "coverMs": 509.1,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 291,
+        "tunnelVisibleMs": 0,
+        "revealMs": 509.2,
+        "maxFrameGapDuringHoldMs": 36.3,
+        "harnessBlankMs": 298.8,
+        "harnessReadyMs": 287.8
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "totalMs": 2212.1,
+        "coverMs": 503,
+        "blankBeforeHudMs": 0,
+        "blankBeforeRevealMs": 0,
+        "hudVisibleMs": 1206,
+        "tunnelVisibleMs": 1200,
+        "revealMs": 503.1,
+        "maxFrameGapDuringHoldMs": 54.6,
+        "harnessBlankMs": 1205.9,
+        "harnessReadyMs": 325.6
+      }
+    ],
+    "wipeTraceFrames": 4834,
+    "routeBlankP95All": 1210.6,
+    "lifecycle": {
+      "created": 22,
+      "destroyed": 21,
+      "maxLive": 1,
+      "live": 1
+    },
+    "contextLossHub": {
+      "cycles": 10,
+      "unrecovered": 0,
+      "recoveryMs": [292, 311, 297, 348, 300, 333, 365, 306, 352, 314],
+      "p95RecoveryMs": 365,
+      "maxRecoveryMs": 365,
+      "scene": "hub/three",
+      "status": "PASS"
+    },
+    "telemetry": {
+      "schema": "blindrev.telemetry.v1",
+      "capturedAt": "2026-11-15T20:29:00.141Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+      "viewport": {
+        "w": 1260,
+        "h": 760,
+        "dpr": 2
+      },
+      "flags": {
+        "stub": false,
+        "hub2d": false,
+        "offline": false
+      },
+      "frame": {
+        "count": 3288,
+        "p50Ms": 6.099999999998545,
+        "p95Ms": 6.200000000004366,
+        "meanFps": 164.4016440164402,
+        "route": "hub"
+      },
+      "routeSwitch": {
+        "count": 24,
+        "blankP95Ms": 1210.6,
+        "gate": "FAIL",
+        "timings": [
+          {
+            "from": "menu",
+            "to": "hub",
+            "blankMs": 596.4,
+            "readyMs": 575.4,
+            "coverMs": 504.5,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:26:58.271Z"
+          },
+          {
+            "from": "hub",
+            "to": "menu",
+            "blankMs": 17.5,
+            "readyMs": 0,
+            "coverMs": 501.1,
+            "slow": false,
+            "impl": "dom",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:27:09.155Z"
+          },
+          {
+            "from": "menu",
+            "to": "mission",
+            "blankMs": 731.2,
+            "readyMs": 721,
+            "coverMs": 501.7,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:27:24.021Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 369.5,
+            "readyMs": 357.1,
+            "coverMs": 503.3,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:27:57.093Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1212.4,
+            "readyMs": 382.2,
+            "coverMs": 502.6,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:00.135Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 428.7,
+            "readyMs": 409.8,
+            "coverMs": 500.4,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:02.382Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1207.3,
+            "readyMs": 409.2,
+            "coverMs": 503.1,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:05.404Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 321.3,
+            "readyMs": 307.8,
+            "coverMs": 502.6,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:07.547Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1205.8,
+            "readyMs": 353.7,
+            "coverMs": 502.4,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:10.565Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 302.2,
+            "readyMs": 290.1,
+            "coverMs": 502.2,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:12.679Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1205.4,
+            "readyMs": 337.4,
+            "coverMs": 504.9,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:15.710Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 303.3,
+            "readyMs": 293.4,
+            "coverMs": 501.7,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:17.832Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1205.2,
+            "readyMs": 372.2,
+            "coverMs": 502.6,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:20.856Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 307.6,
+            "readyMs": 296.5,
+            "coverMs": 501.3,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:22.982Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1205.9,
+            "readyMs": 357.5,
+            "coverMs": 505.6,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:26.013Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 381,
+            "readyMs": 365.4,
+            "coverMs": 504,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:28.207Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1206.6,
+            "readyMs": 459.5,
+            "coverMs": 502.3,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:31.235Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 304.9,
+            "readyMs": 295.2,
+            "coverMs": 505.8,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:33.360Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1206.2,
+            "readyMs": 292.7,
+            "coverMs": 502.9,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:36.377Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 294.4,
+            "readyMs": 285.2,
+            "coverMs": 502.2,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:38.483Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1210.6,
+            "readyMs": 376,
+            "coverMs": 501.1,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:41.509Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 298.8,
+            "readyMs": 287.8,
+            "coverMs": 505.6,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:43.633Z"
+          },
+          {
+            "from": "hub",
+            "to": "mission",
+            "blankMs": 1205.9,
+            "readyMs": 325.6,
+            "coverMs": 500.7,
+            "slow": false,
+            "impl": "cesium",
+            "tunnel": true,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:46.662Z"
+          },
+          {
+            "from": "mission",
+            "to": "hub",
+            "blankMs": 290.7,
+            "readyMs": 281.3,
+            "coverMs": 500.5,
+            "slow": false,
+            "impl": "three",
+            "tunnel": false,
+            "tunnelSkipped": false,
+            "at": "2026-11-15T20:28:48.966Z"
+          }
+        ]
+      },
+      "soak": {
+        "status": "NOT MEASURED",
+        "reason": "performance.memory unavailable in this runtime (Chromium-only API)",
+        "snapshots": 0
+      },
+      "contextLoss": {
+        "cycles": 10,
+        "unrecovered": 0,
+        "recoveryMs": [292, 311, 297, 348, 300, 333, 365, 306, 352, 314],
+        "p95RecoveryMs": 365,
+        "maxRecoveryMs": 365,
+        "scene": "hub/three",
+        "status": "PASS"
+      },
+      "lifecycle": {
+        "created": 23,
+        "destroyed": 22,
+        "maxLive": 1
+      },
+      "tleRefresh": [
+        {
+          "at": "2026-11-15T20:26:57.083Z",
+          "outcome": "skipped-cache-fresh",
+          "detail": "last attempt 0 min ago (2 h minimum)"
+        }
+      ],
+      "state": {
+        "route": "hub",
+        "overlay": null,
+        "wipe": {
+          "phase": "idle",
+          "progress": null,
+          "label": "Preparing your expedition",
+          "slow": false,
+          "mode": "loading"
+        },
+        "scene": {
+          "kind": "hub",
+          "impl": "three"
+        },
+        "lifecycle": {
+          "created": 23,
+          "destroyed": 22,
+          "maxLive": 1,
+          "live": 1
+        },
+        "hubMode": "3d",
+        "hubFallbackReason": null,
+        "globeMode": "cesium",
+        "globeFallbackReason": null,
+        "globeStatus": {
+          "terrain": "ELLIPSOID",
+          "imagery": "ONLINE",
+          "offline": false,
+          "contextLost": false,
+          "sceneReady": true,
+          "logDepth": true,
+          "webgl2": true,
+          "message": "Ellipsoid terrain — no ion token"
+        },
+        "watch": null,
+        "mission": {
+          "pair": {
+            "a": null,
+            "b": null
+          },
+          "vertices": [],
+          "closed": false,
+          "selectedIndex": null,
+          "validation": null,
+          "outcome": null,
+          "noAcquisition": null,
+          "layers": {
+            "evidence": {
+              "visible": true,
+              "opacity": 0.85
+            },
+            "qa": {
+              "visible": false,
+              "opacity": 0.6
+            },
+            "context": {
+              "visible": true,
+              "opacity": 1
+            },
+            "groundTrack": {
+              "visible": true,
+              "opacity": 1
+            },
+            "referenceMask": {
+              "visible": false,
+              "opacity": 0.7
+            }
+          }
+        },
+        "pairStatus": null,
+        "validateStatus": null,
+        "nisar": {
+          "timeIso": "2026-11-15T20:29:00.086Z",
+          "ecefM": {
+            "x": -3651100.45327624,
+            "y": 1645340.2629150772,
+            "z": -5906544.114839622
+          },
+          "velEcefMps": {
+            "x": -4519.247739827752,
+            "y": 4490.652225402628,
+            "z": 4046.738676913062
+          },
+          "lonDeg": 155.74165879044426,
+          "latDeg": -56.02150856596049,
+          "heightM": 772704.3425109411
+        },
+        "tle": {
+          "source": "snapshot",
+          "epochIso": "2026-11-15T12:25:21.122Z",
+          "ageHours": 8.060823333333333,
+          "stale": false,
+          "refreshLog": [
+            {
+              "at": "2026-11-15T20:26:57.083Z",
+              "outcome": "skipped-cache-fresh",
+              "detail": "last attempt 0 min ago (2 h minimum)"
+            }
+          ]
+        },
+        "journalCount": 1,
+        "settings": {
+          "quality": "medium",
+          "motion": "system",
+          "sound": true,
+          "volume": 0.6,
+          "customCamera": true
+        }
+      }
+    },
+    "cspViolationsEvents": [
+      {
+        "directive": "script-src",
+        "effective": "script-src",
+        "blocked": "eval",
+        "source": "http://tauri.localhost/assets/src-8ZTEpVZA.js:1",
+        "sample": ""
+      }
+    ]
+  },
+  "cspViolationsFinal": [
+    {
+      "directive": "script-src",
+      "effective": "script-src",
+      "blocked": "eval",
+      "source": "http://tauri.localhost/assets/src-8ZTEpVZA.js:1",
+      "sample": ""
+    }
+  ],
+  "failed": null,
+  "events": {
+    "console": [],
+    "pageErrors": [],
+    "requestFailed": [
+      {
+        "stage": "reload",
+        "url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=65053&FORMAT=TLE",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "httpErrors": [],
+    "csp": [],
+    "workers": [
+      {
+        "stage": "mission-frames",
+        "url": "http://tauri.localhost/cesium/Workers/createGeometry.js"
+      },
+      {
+        "stage": "mission-frames",
+        "url": "http://tauri.localhost/cesium/Workers/transferTypedArrayTest.js"
+      },
+      {
+        "stage": "mission-frames",
+        "url": "http://tauri.localhost/cesium/Workers/createGeometry.js"
+      },
+      {
+        "stage": "mission-frames",
+        "url": "http://tauri.localhost/cesium/Workers/createGeometry.js"
+      },
+      {
+        "stage": "mission-frames",
+        "url": "http://tauri.localhost/cesium/Workers/createGeometry.js"
+      },
+      {
+        "stage": "mission-frames",
+        "url": "http://tauri.localhost/cesium/Workers/createVerticesFromHeightmap.js"
+      },
+      {
+        "stage": "mission-frames",
+        "url": "http://tauri.localhost/cesium/Workers/incrementallyBuildTerrainPicker.js"
+      },
+      {
+        "stage": "mission-frames",
+        "url": "http://tauri.localhost/cesium/Workers/combineGeometry.js"
+      }
+    ]
+  },
+  "exitedByItself": null,
+  "finishedAt": "2026-11-15T20:29:00.153Z"
+}

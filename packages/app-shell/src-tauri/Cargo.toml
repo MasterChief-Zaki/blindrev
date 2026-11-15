@@ -1,0 +1,31 @@
+[package]
+name = "blindrev"
+version = "0.1.0"
+description = "BlindRev - a NISAR radar investigation game (desktop shell)"
+authors = ["BlindRev team"]
+license = "MIT"
+edition = "2021"
+rust-version = "1.77.2"
+default-run = "blindrev"
+
+[lib]
+# Desktop-only shell: plain rlib (mobile targets would also need staticlib/cdylib).
+name = "blindrev_lib"
+crate-type = ["rlib"]
+
+[[bin]]
+name = "blindrev"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-log = "2"
+log = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+strip = "debuginfo"

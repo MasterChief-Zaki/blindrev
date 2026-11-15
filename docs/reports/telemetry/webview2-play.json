@@ -1,0 +1,373 @@
+{
+  "scenario": "play",
+  "startedAt": "2026-11-15T20:42:12.619Z",
+  "exe": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\packages\\app-shell\\src-tauri\\target\\release\\blindrev.exe",
+  "exeBytes": 66766848,
+  "cdpVersion": {
+    "Browser": "Edg/157.0.4341.46",
+    "File-Path-Style": "windows",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+    "V8-Version": "15.7.11.4",
+    "WebKit-Version": "537.36 (@a0c6bd61d7884b3c402a34c67d05100107a9e5e4)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9333/devtools/browser/8a72beef-4917-4e55-907c-bef71c76d434"
+  },
+  "appOrigin": "http://tauri.localhost",
+  "env": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+    "viewport": {
+      "w": 1260,
+      "h": 760,
+      "dpr": 2
+    },
+    "screen": {
+      "w": 1280,
+      "h": 800,
+      "availW": 1280,
+      "availH": 800
+    },
+    "webgl2": true,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D18) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "vendor": "Google Inc. (NVIDIA)",
+    "isTauri": true,
+    "baseURI": "http://tauri.localhost/",
+    "precisePerfMemory": true
+  },
+  "play": {
+    "steps": {
+      "menuItems": ["menu-new", "menu-continue", "menu-settings", "menu-credits", "menu-quit"],
+      "zoomHotkeys": {
+        "before": {
+          "dpr": 2,
+          "innerW": 1260
+        },
+        "afterCtrlPlus": {
+          "dpr": 2,
+          "innerW": 1260
+        },
+        "afterCtrl0": {
+          "dpr": 2,
+          "innerW": 1260
+        },
+        "zoomed": false
+      },
+      "hub": {
+        "scene": {
+          "kind": "hub",
+          "impl": "three"
+        },
+        "hubMode": "3d",
+        "hubFallbackReason": null,
+        "canvas": {
+          "w": 2472,
+          "h": 1491,
+          "ctxType": "webgl2"
+        },
+        "lifecycle": {
+          "created": 1,
+          "destroyed": 0,
+          "maxLive": 1,
+          "live": 1
+        }
+      },
+      "globe": {
+        "sceneReadyWaitOk": true,
+        "scene": {
+          "kind": "mission",
+          "impl": "cesium"
+        },
+        "globeMode": "cesium",
+        "globeFallbackReason": null,
+        "globeStatus": {
+          "terrain": "ELLIPSOID",
+          "imagery": "ONLINE",
+          "offline": false,
+          "contextLost": false,
+          "sceneReady": true,
+          "logDepth": true,
+          "webgl2": true,
+          "message": "Ellipsoid terrain — no ion token"
+        },
+        "canvas": {
+          "w": 1260,
+          "h": 760
+        }
+      },
+      "watchAfterStart": {
+        "state": "PLAYING",
+        "index": 4,
+        "stepId": "s05",
+        "date": "2026-05-24T02:56:43Z",
+        "isAvailable": true
+      },
+      "noAcquisition": {
+        "watch": {
+          "state": "PAUSED_UNAVAILABLE",
+          "index": 1,
+          "stepId": "s02",
+          "date": "2026-02-05",
+          "isAvailable": false
+        },
+        "flag": {
+          "stepId": "s02",
+          "date": "2026-02-05"
+        },
+        "card": true
+      },
+      "pair": {
+        "pair": ["s01", "s09"],
+        "status": {
+          "ok": true,
+          "reason": null,
+          "dtDays": 287.9999652777778
+        }
+      },
+      "roi": {
+        "ok": true,
+        "reason": null
+      },
+      "verdict": {
+        "kind": "SCORE",
+        "iou": 0.7991959798994975,
+        "precision": 1,
+        "recall": 0.7991959798994975,
+        "tier": "PASS",
+        "advisory": [],
+        "roiPixels": 10734,
+        "validPixels": 7952,
+        "coverage": 0.7408235513322153,
+        "tp": 7952,
+        "fp": 0,
+        "fn": 1998,
+        "digest": "ffb9fab1119ae40cae71b38d269c56996204cc16e37a01ca547228ae2cf652c4"
+      },
+      "journalCount": 1,
+      "lifecycle": {
+        "created": 3,
+        "destroyed": 2,
+        "maxLive": 1,
+        "live": 1
+      },
+      "quit": {
+        "processExited": true,
+        "exit": {
+          "code": 0,
+          "signal": null,
+          "atMs": 38307
+        },
+        "afterMs": 892
+      }
+    },
+    "shots": {
+      "menu": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\docs\\reports\\desktop-shots\\01-menu.png",
+      "hub": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\docs\\reports\\desktop-shots\\02-hub.png",
+      "briefing": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\docs\\reports\\desktop-shots\\03-mission-briefing.png",
+      "mission": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\docs\\reports\\desktop-shots\\04-mission-watch.png",
+      "noAcquisition": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\docs\\reports\\desktop-shots\\05-no-acquisition.png",
+      "roi": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\docs\\reports\\desktop-shots\\06-roi.png",
+      "verdict": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\docs\\reports\\desktop-shots\\07-verdict.png",
+      "hubAgain": "C:\\Users\\Mrworldwide\\Downloads\\Projects\\NASA\\blindrev\\docs\\reports\\desktop-shots\\08-hub-again.png"
+    },
+    "assets": {
+      "fonts": {
+        "loaded": [
+          "Outfit 600 normal",
+          "Outfit 800 normal",
+          "IBM Plex Sans 400 normal",
+          "IBM Plex Sans 600 normal",
+          "IBM Plex Mono 400 normal"
+        ],
+        "error": [],
+        "outfit": true,
+        "plexSans": true,
+        "plexMono": true,
+        "bodyFont": "\"IBM Plex Sans\", Arial, sans-serif"
+      },
+      "fontFiles": {
+        "count": 5,
+        "statuses": [200],
+        "sample": [
+          "http://tauri.localhost/assets/outfit-latin-800-normal-CQna6-G7.woff2",
+          "http://tauri.localhost/assets/outfit-latin-600-normal-B7SfZ07L.woff2",
+          "http://tauri.localhost/assets/ibm-plex-sans-latin-600-normal-CuJfVYMP.woff2",
+          "http://tauri.localhost/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2"
+        ]
+      },
+      "audio": {
+        "count": 5,
+        "statuses": [200],
+        "sample": [
+          "http://tauri.localhost/audio/ui-press.mp3",
+          "http://tauri.localhost/audio/ui-confirm.mp3",
+          "http://tauri.localhost/audio/travel-shutter.mp3",
+          "http://tauri.localhost/audio/scan-ping.mp3"
+        ]
+      },
+      "offlineTiles": {
+        "count": 0,
+        "statuses": [],
+        "sample": []
+      },
+      "missionData": {
+        "count": 27,
+        "statuses": [200],
+        "sample": [
+          "http://tauri.localhost/mission-data/sinking-city/evidence/s01.png",
+          "http://tauri.localhost/mission-data/sinking-city/evidence/s03.png",
+          "http://tauri.localhost/mission-data/sinking-city/evidence/s04.png",
+          "http://tauri.localhost/mission-data/sinking-city/evidence/s05.png"
+        ]
+      },
+      "cesiumWorkers": {
+        "count": 24,
+        "statuses": [200],
+        "sample": [
+          "http://tauri.localhost/cesium/Workers/createGeometry.js",
+          "http://tauri.localhost/cesium/Workers/chunk-SOIWLLGP.js",
+          "http://tauri.localhost/cesium/Workers/chunk-MDI2T7LJ.js",
+          "http://tauri.localhost/cesium/Workers/chunk-FZYUOFLY.js"
+        ]
+      },
+      "cesiumAssets": {
+        "count": 3,
+        "statuses": [200],
+        "sample": [
+          "http://tauri.localhost/cesium/Assets/approximateTerrainHeights.json",
+          "http://tauri.localhost/cesium/Assets/IAU2006_XYS/IAU2006_XYS_18.json",
+          "http://tauri.localhost/cesium/Assets/Images/ion-credit.png"
+        ]
+      },
+      "wasm": {
+        "count": 0,
+        "statuses": [],
+        "sample": []
+      },
+      "gibs": {
+        "count": 81,
+        "statuses": [200],
+        "sample": [
+          "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/2004-08-01/GoogleMapsCompatible_Level8/1/0/0.jpeg",
+          "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/2004-08-01/GoogleMapsCompatible_Level8/1/1/0.jpeg",
+          "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/2004-08-01/GoogleMapsCompatible_Level8/1/0/1.jpeg",
+          "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/2004-08-01/GoogleMapsCompatible_Level8/1/1/1.jpeg"
+        ]
+      },
+      "ion": {
+        "count": 0,
+        "statuses": [],
+        "sample": []
+      },
+      "celestrak": {
+        "count": 0,
+        "statuses": [],
+        "sample": []
+      },
+      "absoluteSelfUrls": 81,
+      "totalResources": 162
+    },
+    "tle": {
+      "source": "snapshot",
+      "epochIso": "2026-11-15T12:25:21.122Z",
+      "ageHours": 8.290012222222222,
+      "stale": false,
+      "refreshLog": [
+        {
+          "at": "2026-11-15T20:42:13.164Z",
+          "outcome": "skipped-cache-fresh",
+          "detail": "last attempt 15 min ago (2 h minimum)"
+        }
+      ]
+    },
+    "cspViolationsEvents": [
+      {
+        "directive": "script-src",
+        "effective": "script-src",
+        "blocked": "eval",
+        "source": "http://tauri.localhost/assets/src-8ZTEpVZA.js:1",
+        "sample": ""
+      }
+    ],
+    "routeTimings": [
+      {
+        "from": "menu",
+        "to": "hub",
+        "blankMs": 366.9,
+        "readyMs": 355.1,
+        "coverMs": 504.6,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:42:27.763Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 1209.3,
+        "readyMs": 407.3,
+        "coverMs": 502.2,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:42:33.299Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 275.3,
+        "readyMs": 259.5,
+        "coverMs": 502.6,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:42:46.720Z"
+      }
+    ]
+  },
+  "failed": null,
+  "events": {
+    "console": [],
+    "pageErrors": [],
+    "requestFailed": [],
+    "httpErrors": [],
+    "csp": [],
+    "workers": [
+      {
+        "stage": "briefing",
+        "url": "http://tauri.localhost/cesium/Workers/createGeometry.js"
+      },
+      {
+        "stage": "briefing",
+        "url": "http://tauri.localhost/cesium/Workers/transferTypedArrayTest.js"
+      },
+      {
+        "stage": "briefing",
+        "url": "http://tauri.localhost/cesium/Workers/createGeometry.js"
+      },
+      {
+        "stage": "briefing",
+        "url": "http://tauri.localhost/cesium/Workers/createGeometry.js"
+      },
+      {
+        "stage": "briefing",
+        "url": "http://tauri.localhost/cesium/Workers/createVerticesFromHeightmap.js"
+      },
+      {
+        "stage": "briefing",
+        "url": "http://tauri.localhost/cesium/Workers/incrementallyBuildTerrainPicker.js"
+      },
+      {
+        "stage": "briefing",
+        "url": "http://tauri.localhost/cesium/Workers/combineGeometry.js"
+      }
+    ]
+  },
+  "exitedByItself": {
+    "code": 0,
+    "signal": null,
+    "atMs": 38307
+  },
+  "finishedAt": "2026-11-15T20:42:51.006Z"
+}

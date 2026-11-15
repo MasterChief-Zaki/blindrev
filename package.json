@@ -1,0 +1,38 @@
+{
+  "name": "blindrev",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.30.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @blindrev/app-shell dev",
+    "build": "pnpm -r --workspace-concurrency=1 build",
+    "preview": "pnpm --filter @blindrev/app-shell preview",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "forge": "pnpm --filter @blindrev/data-forge forge",
+    "verify:assets": "pnpm --filter @blindrev/data-forge verify",
+    "desktop": "pnpm --filter @blindrev/app-shell tauri dev",
+    "desktop:build": "pnpm --filter @blindrev/app-shell tauri build --no-bundle",
+    "desktop:bundle": "pnpm --filter @blindrev/app-shell tauri build",
+    "e2e": "playwright test --config tests/e2e/playwright.config.ts",
+    "shot": "node tools/shot.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.8",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "@types/pngjs": "^6.0.5",
+    "playwright": "^1.65.1",
+    "pngjs": "^7.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

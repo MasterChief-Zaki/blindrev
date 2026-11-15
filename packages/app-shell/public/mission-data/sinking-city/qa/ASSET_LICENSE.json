@@ -1,0 +1,8 @@
+{
+  "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+  "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+  "source": "packages/data-forge/src/forge.ts",
+  "notes": "SIMULATED coherence/QA masks. .bin: 512×512 Uint8 row-major, 1 = valid, 0 = invalid. .png: same grid, hatched matte pattern on invalid pixels.",
+  "deterministic": true,
+  "generator": "@blindrev/data-forge data-forge-1 (pnpm --filter @blindrev/data-forge forge)"
+}

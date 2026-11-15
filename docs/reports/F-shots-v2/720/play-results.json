@@ -1,0 +1,148 @@
+{
+  "results": {
+    "hub": {
+      "kind": "hub",
+      "impl": "three"
+    },
+    "globe": {
+      "scene": {
+        "kind": "mission",
+        "impl": "cesium"
+      },
+      "status": {
+        "terrain": "ELLIPSOID",
+        "imagery": "ONLINE",
+        "offline": false,
+        "contextLost": false,
+        "sceneReady": true,
+        "logDepth": true,
+        "webgl2": true,
+        "message": "Ellipsoid terrain — no ion token"
+      }
+    },
+    "noAcqIndex": 1,
+    "noAcqState": {
+      "state": "PAUSED_UNAVAILABLE",
+      "index": 1,
+      "stepId": "s02",
+      "date": "2026-02-05",
+      "isAvailable": false
+    },
+    "roi": {
+      "validation": {
+        "ok": true,
+        "area": 131.79654820207153,
+        "errors": []
+      },
+      "validateStatus": {
+        "ok": true,
+        "reason": null
+      }
+    },
+    "pass": {
+      "kind": "SCORE",
+      "iou": 0.7991959798994975,
+      "precision": 1,
+      "recall": 0.7991959798994975,
+      "tier": "PASS",
+      "advisory": [],
+      "roiPixels": 10734,
+      "validPixels": 7952,
+      "coverage": 0.7408235513322153,
+      "tp": 7952,
+      "fp": 0,
+      "fn": 1998,
+      "digest": "ffb9fab1119ae40cae71b38d269c56996204cc16e37a01ca547228ae2cf652c4"
+    },
+    "qaBox": {
+      "box": [-119.89140625, 35.908437500000005, -119.7884765625, 35.994765625],
+      "coverage": 0
+    },
+    "qaRoi": {
+      "ok": true,
+      "reason": null
+    },
+    "qa": {
+      "kind": "QA_DIAGNOSTIC",
+      "code": "LOW_COHERENCE",
+      "message": "Low interferometric coherence in selected zone; inspect high-coherence mask",
+      "coverage": 0,
+      "validPixels": 0,
+      "roiPixels": 7225
+    },
+    "lifecycle": {
+      "created": 3,
+      "destroyed": 2,
+      "maxLive": 1,
+      "live": 1
+    },
+    "routeTimings": [
+      {
+        "from": "menu",
+        "to": "hub",
+        "blankMs": 1215.5,
+        "readyMs": 1184.7,
+        "coverMs": 502.6,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:26:32.498Z"
+      },
+      {
+        "from": "hub",
+        "to": "mission",
+        "blankMs": 2632.6,
+        "readyMs": 2518.4,
+        "coverMs": 507.6,
+        "slow": false,
+        "impl": "cesium",
+        "tunnel": true,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:26:38.969Z"
+      },
+      {
+        "from": "mission",
+        "to": "hub",
+        "blankMs": 276.2,
+        "readyMs": 254.8,
+        "coverMs": 512.7,
+        "slow": false,
+        "impl": "three",
+        "tunnel": false,
+        "tunnelSkipped": false,
+        "at": "2026-11-15T20:26:54.206Z"
+      }
+    ],
+    "tle": {
+      "source": "snapshot",
+      "epochIso": "2026-11-15T12:25:21.122Z",
+      "ageHours": 8.026285833333333,
+      "stale": false,
+      "refreshLog": [
+        {
+          "at": "2026-11-15T20:26:29.747Z",
+          "outcome": "skipped-automation",
+          "detail": "navigator.webdriver — snapshot only"
+        }
+      ]
+    }
+  },
+  "log": [
+    {
+      "stage": "boot",
+      "type": "requestfailed",
+      "text": "http://localhost:4173/assets/outfit-latin-600-normal-B7SfZ07L.woff2 net::ERR_ABORTED"
+    },
+    {
+      "stage": "boot",
+      "type": "requestfailed",
+      "text": "http://localhost:4173/assets/ibm-plex-sans-latin-600-normal-CuJfVYMP.woff2 net::ERR_ABORTED"
+    },
+    {
+      "stage": "boot",
+      "type": "requestfailed",
+      "text": "http://localhost:4173/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2 net::ERR_ABORTED"
+    }
+  ]
+}

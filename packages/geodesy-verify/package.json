@@ -1,0 +1,28 @@
+{
+  "name": "@blindrev/geodesy-verify",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p .",
+    "build": "tsc --noEmit -p .",
+    "test": "vitest run --project correctness && (vitest run --project parity || echo PARITY FAIL - non-blocking per spec 8, see docs/reports/spike-D-geodesy.md)",
+    "test:correctness": "vitest run --project correctness",
+    "test:parity": "vitest run --project parity",
+    "verify": "tsx src/verify.ts"
+  },
+  "dependencies": {
+    "@blindrev/core-sim": "workspace:*"
+  },
+  "devDependencies": {
+    "cesium": "^1.147.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0",
+    "@types/node": "^26.6.6"
+  }
+}

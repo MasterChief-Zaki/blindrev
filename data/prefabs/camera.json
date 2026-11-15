@@ -1,0 +1,20 @@
+{
+  "k": 0.1,
+  "vMinMps": 25,
+  "vMaxMps": 100000,
+  "minClearanceM": 250,
+  "minEllipsoidalHeightM": 500,
+  "rangeMinM": 800,
+  "rangeMaxM": 25000000,
+  "latClampDeg": 89.5,
+  "zoomRatePerS": 1.5,
+  "wheelZoomStep": 0.2,
+  "terrainSamples": 5,
+  "home": {
+    "lonDeg": 0,
+    "latDeg": 15,
+    "rangeM": 20000000,
+    "headingDeg": 0,
+    "pitchDeg": -90
+  }
+}

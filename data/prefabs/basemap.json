@@ -1,0 +1,25 @@
+{
+  "online": {
+    "layerId": "BlueMarble_ShadedRelief_Bathymetry",
+    "urlTemplate": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/2004-08-01/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg",
+    "minZoom": 0,
+    "maxZoom": 8,
+    "tileMatrixSet": "GoogleMapsCompatible",
+    "crs": "EPSG:3857",
+    "date": "2004-08-01",
+    "attribution": "NASA Earth Observatory Blue Marble (MODIS) via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+    "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)"
+  },
+  "offline": {
+    "urlTemplate": "offline-tiles/bluemarble/{z}/{y}/{x}.jpeg",
+    "minZoom": 0,
+    "maxZoom": 5,
+    "regionalMaxZoom": 8,
+    "regionalBounds": [-122.4, 33.88, -117.78, 38.4],
+    "tileMatrixSet": "GoogleMapsCompatible",
+    "crs": "EPSG:3857",
+    "attribution": "NASA Earth Observatory Blue Marble (MODIS) via NASA GIBS. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+    "license": "NASA open data: full and open sharing; data from NASA-led missions are CC0 unless marked otherwise (NASA Earthdata 'Data Use and Citation Guidance', https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)",
+    "notes": "Global coverage z0–maxZoom; z(maxZoom+1)–regionalMaxZoom only inside regionalBounds (AOI ± 2°). Clamp the provider to regionalBounds above maxZoom."
+  }
+}

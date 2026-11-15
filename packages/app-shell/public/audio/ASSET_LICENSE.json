@@ -1,0 +1,6 @@
+{
+  "license": "Project-owner supplied (all rights granted to the BlindRev project by the owner)",
+  "attribution": "Audio clips supplied by the BlindRev project owner; trimmed and loudness-normalised by agent U",
+  "source": "C:/Users/Mrworldwide/Downloads/WhatsApp Audio 2026-11-15 at 9.27.17 PM.mpeg; ...9.27.18 PM (1).mpeg; ...9.27.18 PM.mpeg (originals kept byte-identical in ./originals)",
+  "notes": "Derived files: ui-press.mp3 (57 ms slice of clip A, low-passed 3.5 kHz, exp decay), ui-confirm.mp3 (clip B, trimmed 1.15 s, -1 dB, ~-20 LUFS), travel-shutter.mp3 (clip A, trimmed 1.40 s, -12 dB, ~-21 LUFS), scan-ping.mp3 (one ping of clip C, +16 dB, ~-26 LUFS), ambient-beacon-loop.mp3 (clip C 1.00-10.24 s = 5 pings at a 1.85 s period, seamless loop, +8 dB, ~-30 LUFS). Encoded libmp3lame 160 kbps, 44.1 kHz stereo. Mapping rationale: docs/decisions/U.md."
+}

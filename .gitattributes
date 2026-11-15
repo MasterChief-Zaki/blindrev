@@ -1,0 +1,30 @@
+# Normalise text to LF in the repo and working tree (Windows clones included).
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Other binaries: never diff/merge as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.icns binary
+*.bin binary
+*.glb binary
+*.woff2 binary
+
+# Binary assets under the runtime asset root are stored in Git LFS.
+packages/app-shell/public/**/*.png filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.webp filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.bin filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.gltf filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.glb filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.woff2 filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.ogg filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.ktx2 filter=lfs diff=lfs merge=lfs -text
+packages/app-shell/public/**/*.hdr filter=lfs diff=lfs merge=lfs -text

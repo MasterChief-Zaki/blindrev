@@ -1,0 +1,8 @@
+{
+  "license": "CC0-1.0 (BlindRev data-forge output; SIMULATED, deterministic, seeded)",
+  "attribution": "SIMULATED by BlindRev data-forge (seeded, deterministic). Acquisition dates, track, frame and orbit direction: NASA/JPL-Caltech NISAR catalogue (ASF DAAC, NASA CMR).",
+  "source": "packages/data-forge/src/forge.ts",
+  "notes": "SIMULATED cumulative line-of-sight displacement (mm). Display PNGs: 1024×1024, EPSG:4326, matte 3-step subsidence ramp. .f32: 512×512 Float32 little-endian, mm, NaN = invalid (QA). Only the acquisition dates/track/frame/orbit direction are real (NISAR catalogue).",
+  "deterministic": true,
+  "generator": "@blindrev/data-forge data-forge-1 (pnpm --filter @blindrev/data-forge forge)"
+}

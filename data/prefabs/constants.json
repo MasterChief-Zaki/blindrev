@@ -1,0 +1,33 @@
+{
+  "scoring": {
+    "dtMinDays": 24,
+    "iouPass": 0.5,
+    "iouPartial": 0.35,
+    "advisoryPrecisionRecall": 0.6,
+    "roiAreaMinKm2": 25,
+    "roiAreaMaxKm2": 2500,
+    "qaMinCoverage": 0.6,
+    "qaMinValidPixels": 500,
+    "maskRegistrationMaxPx": 1
+  },
+  "tle": {
+    "maxAgeHours": 72,
+    "freshWindowHours": 24,
+    "noradId": 65053
+  },
+  "wipe": {
+    "durationMs": 500,
+    "easing": "cubic-bezier(0.2, 0, 0, 1)",
+    "progressCapMs": 3000
+  },
+  "soak": {
+    "durationMin": 30,
+    "snapshotS": 60,
+    "maxHeapDeltaMb": 200
+  },
+  "visualCi": {
+    "maxDiffRatio": 0.02
+  },
+  "roiNudgeDeg": 0.001,
+  "roiNudgeCoarseFactor": 10
+}

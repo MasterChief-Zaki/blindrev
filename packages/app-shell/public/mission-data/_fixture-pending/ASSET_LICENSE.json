@@ -1,0 +1,8 @@
+{
+  "license": "CC0-1.0 (BlindRev data-forge output; TEST_FIXTURE / PLACEHOLDER)",
+  "attribution": "BlindRev data-forge — synthetic placeholder tiles for the PENDING-AOI path. Not real data.",
+  "source": "packages/data-forge/src/fixture.ts",
+  "notes": "TEST_FIXTURE mission over fixture bounds; PLACEHOLDER evidence (checker pattern + synthetic disc). Proves the PENDING path.",
+  "deterministic": true,
+  "generator": "@blindrev/data-forge (pnpm --filter @blindrev/data-forge forge --pending)"
+}
